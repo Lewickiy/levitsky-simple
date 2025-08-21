@@ -21,4 +21,6 @@
 ## 🚀 Как развернуть локально
 1. Склонируй репозиторий:
    ```bash
-   git clone https://github.com/Lewickiy/levitsky-simple.git
+   git clone https://github.com/Lewickiy/levitsky-simple.git```
+2. Перейди в папку проекта
+3. Открой файл index.html в браузере
