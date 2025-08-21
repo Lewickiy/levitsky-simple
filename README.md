@@ -24,3 +24,18 @@
    git clone https://github.com/Lewickiy/levitsky-simple.git```
 2. Перейди в папку проекта
 3. Открой файл index.html в браузере
+
+## 📂 Структура проекта
+```angular2html
+.
+├── index.html      # Главная страница резюме
+├── style.css       # Стили сайта
+├── public/
+│   ├── avatar_levitsky.webp   # Фото
+│   └── favicon.ico            # Иконка сайта
+└── README.md       # Документация проекта
+```
+
+## 👨‍💻 Автор
+**Анатолий Левицкий**  
+[GitHub](https://github.com/Lewickiy) | [Telegram](https://t.me/alewickiy) | [levitsky.ru](https://levitsky.ru/)
