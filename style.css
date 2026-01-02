@@ -485,6 +485,11 @@ h2 {
         margin-bottom: 2px;
     }
 
+    .lang-switch,
+    .role-switch {
+        display: none !important;
+    }
+
     * {
         orphans: 2;
         widows: 2;
