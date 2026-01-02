@@ -1,0 +1,197 @@
+{
+  "experience": [
+    {
+      "id": "element_microservices_2024",
+      "company": "ELEMENT",
+      "period": {
+        "from": "2024-12-15",
+        "to": "present"
+      },
+      "project": {
+        "name": {
+          "ru": "Система мониторинга рабочего персонала и техники",
+          "en": "Workforce and Equipment Monitoring System"
+        },
+        "architecture": "Microservices"
+      },
+      "team": {
+        "backend": 2,
+        "frontend": 2,
+        "qa": 2
+      },
+      "technologies": [
+        "Java 17/21",
+        "Spring",
+        "Gradle",
+        "PostgreSQL",
+        "Apache Kafka",
+        "Flyway",
+        "GitLab",
+        "Swagger",
+        "Postman",
+        "PostGIS",
+        "GeoServer"
+      ],
+      "content": {
+        "hr": {
+          "ru": {
+            "summary": "Поддержка и развитие системы мониторинга персонала и техники после перехода на микросервисную архитектуру.",
+            "responsibilities": [
+              "Провёл ревизию системы после миграции с монолита",
+              "Устранил критические технические и архитектурные проблемы",
+              "Повысил стабильность и надёжность системы"
+            ]
+          },
+          "en": {
+            "summary": "Maintained and improved a workforce and equipment monitoring system after migration to microservices.",
+            "responsibilities": [
+              "Performed system audit after monolith-to-microservices migration",
+              "Resolved critical architectural and technical issues",
+              "Improved system stability and reliability"
+            ]
+          }
+        },
+        "cto": {
+          "ru": {
+            "responsibilities": [
+              "Провёл архитектурный аудит микросервисов",
+              "Исправил проблемы взаимодействия сервисов и работы с Kafka",
+              "Участвовал в развитии API и интеграций"
+            ]
+          },
+          "en": {
+            "responsibilities": [
+              "Conducted architectural audit of microservices",
+              "Resolved inter-service communication and Kafka-related issues",
+              "Participated in API and integration design"
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "element_monolith_2023",
+      "company": "ELEMENT",
+      "period": {
+        "from": "2023-11-09",
+        "to": "2024-12-15"
+      },
+      "project": {
+        "name": {
+          "ru": "Система контроля безопасности производственного процесса",
+          "en": "Industrial Safety Control System"
+        },
+        "architecture": "Monolith"
+      },
+      "team": {
+        "backend": 5,
+        "frontend": 2,
+        "qa": 2
+      },
+      "technologies": [
+        "Java 17",
+        "Spring 3.2.4",
+        "Gradle",
+        "PostgreSQL 15.2",
+        "Docker",
+        "Flyway",
+        "GitLab",
+        "Swagger",
+        "Postman",
+        "Apache POI",
+        "MinIO (S3)"
+      ],
+      "content": {
+        "hr": {
+          "ru": {
+            "summary": "Разработка системы промышленной безопасности для энергетической компании.",
+            "responsibilities": [
+              "Участвовал в обсуждении требований заказчика",
+              "Оценивал задачи и предлагал технические решения",
+              "Разрабатывал бизнес-логику системы"
+            ]
+          },
+          "en": {
+            "summary": "Development of an industrial safety control system for an energy company.",
+            "responsibilities": [
+              "Participated in requirements discussions",
+              "Estimated tasks and proposed technical solutions",
+              "Developed core business logic"
+            ]
+          }
+        },
+        "cto": {
+          "ru": {
+            "responsibilities": [
+              "Проектировал бизнес-логику с применением DDD",
+              "Использовал AOP и REST API",
+              "Участвовал в выборе технологического стека"
+            ]
+          },
+          "en": {
+            "responsibilities": [
+              "Designed business logic using DDD principles",
+              "Applied AOP and RESTful API",
+              "Participated in technology stack selection"
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "self_yt2j_2024",
+      "company": "Self-employed",
+      "period": {
+        "from": "2024-12-01",
+        "to": "2025-02-01"
+      },
+      "project": {
+        "name": {
+          "ru": "Project Transfer (YT2J)",
+          "en": "Project Transfer (YT2J)"
+        },
+        "architecture": "Monolith"
+      },
+      "technologies": [
+        "Java 21",
+        "Maven",
+        "Jira API",
+        "YouTrack API"
+      ],
+      "content": {
+        "hr": {
+          "ru": {
+            "summary": "Система автоматической миграции задач между YouTrack и Jira.",
+            "responsibilities": [
+              "Реализовал автоматическую миграцию более 20 000 задач",
+              "Обеспечил перенос статусов, комментариев, связей и вложений"
+            ]
+          },
+          "en": {
+            "summary": "Automated task migration system from YouTrack to Jira.",
+            "responsibilities": [
+              "Migrated over 20,000 tasks across 8 projects",
+              "Ensured migration of statuses, comments, links and attachments"
+            ]
+          }
+        },
+        "cto": {
+          "ru": {
+            "responsibilities": [
+              "Интеграция с внешними REST API",
+              "Обеспечение целостности и корректности данных"
+            ]
+          },
+          "en": {
+            "responsibilities": [
+              "Integrated with external REST APIs",
+              "Ensured data consistency and migration reliability"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

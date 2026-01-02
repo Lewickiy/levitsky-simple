@@ -93,109 +93,27 @@
             <div class="bottom-right-col">
                 <!--            Правая нижняя панель-->
                 <main class="rightPanel">
-                    <div class="experienceSection">
-                        <h2>EXPERIENCE 3+</h2>
-                        <div class="experienceItem">
-                            <p class="experienceDates">ELEMENT, 15.12.2024 — н.в.</p>
-                            <h4 class="experienceProject">Система мониторинга рабочего персонала и техники</h4>
-                            <div class="experienceDescription">
-                                <p><b>Архитектура:</b> микросервисы</p>
-                                <b>Обязанности и задачи:</b>
-                                <ul>
-                                    <li>Произвёл ревизию и комплекс работ по устранению технических и архитектурных недочётов, возникших при миграции от
-                                        монолитной архитектуры к микросервисной
-                                    </li>
-                                </ul>
-                                <p><b>Команда:</b> backend developer - 2, frontend developer - 2, QA-engineer - 2</p>
-                            </div>
-                            <div class="techLine">
-                                <b>Технологии:&nbsp;</b> Java 21/17, Spring, Gradle, PostgreSQL, Apache-Kafka, Flyway, GitLab, Postman 11.45.6, Swagger,
-                                PostGIS, GeoServer
-                            </div>
-                        </div>
+                    <div class="controls">
+                        <button id="lang-ru">RU</button>
+                        <button id="lang-en">EN</button>
+                    </div>
 
-                        <div class="experienceItem">
-                            <p class="experienceDates">ELEMENT, 09.11.2023 — 15.12.2024</p>
-
-                            <h4 class="experienceProject">Система контроля безопасности производственного процесса для энергетической компании</h4>
-                            <div class="experienceDescription">
-                                <p><b>Архитектура:</b> монолит</p>
-                                <b>Обязанности и задачи:</b>
-                                <ul>
-                                    <li>Участвовал в обсуждении требований заказчика, оценке задач и составлении технических решений</li>
-                                    <li>Осуществлял выбор инструментов для реализации проекта</li>
-                                    <li>Участвовал в проектировании и разработке бизнес-логики</li>
-                                    <li>Применял принципы Domain-Driven Design (DDD), AOP и RESTful API</li>
-                                </ul>
-                                <p><b>Команда:</b> backend developer - 5, frontend developer - 2, QA-engineer - 2</p>
-                            </div>
-                            <div class="techLine">
-                                <b>Технологии:&nbsp;</b> Java 17, Spring 3.2.4, Gradle, PostgreSQL 15.2, Docker 27.3.1, Flyway, GitLab, Swagger, Postman
-                                11.45.6, Apache POI, MinIO (S3) 8.5.9
-                            </div>
-                        </div>
-
-                        <div class="experienceItem">
-                            <p class="experienceDates">SELF EMPLOYMENT, 01.12.2024 — 01.02.2025</p>
-
-                            <h4 class="experienceProject">Project Transfer (YT2J)</h4>
-                            <div class="experienceDescription">
-                                <p><b>Архитектура:</b> монолит</p>
-                                <p>Система, автоматизирующая процесс миграции между трекерами задач YouTrack -> Jira, разработанная для Продуктовых аналитиков
-                                    одной из GameDev компаний.</p>
-                                <p>Итогом реализации проекта стала успешная миграция суммарно более 20000 задач из 8 проектов, включающая в себя статусы,
-                                    комментарии, связи, а также кастомные поля и вложения.</p>
-                            </div>
-                            <div class="techLine">
-                                <b>Технологии:&nbsp;</b> Java 21, Maven, GitLab, Jira API, YouTrack API
-                            </div>
-                        </div>
-
-                        <div class="experienceItem">
-                            <p class="experienceDates">SELF EMPLOYMENT, 01.09.2024 — н.в.</p>
-
-                            <h4 class="experienceProject">CityDriveBooster</h4>
-                            <p>Telegram-бот, созданный для взаимодействия с системой диспетчеризации задач Сити Драйв. Бот позволяет пользователям
-                                автоматизировать поиск, выбор и управление заданиями с использованием API Сити Драйв.</p>
-                            <div class="experienceDescription">
-                                <p><b>Архитектура:</b> монолит</p>
-                                <b>Обязанности и задачи:</b>
-                                <ul>
-                                    <li>Определял технологии соответствующие бизнес-требованиям заказчика</li>
-                                    <li>Оценивал ресурсы, необходимые для реализации проекта</li>
-                                    <li>Настраивал инфраструктуру проекта</li>
-                                    <li>Реализовал бизнес-логику с 0 до прода</li>
-                                    <li>Тестировал и вводил систему в эксплуатацию</li>
-                                    <li>Поддержка и развитие: оптимизация и исправление багов, добавление новых фич</li>
-                                </ul>
-                            </div>
-                            <div class="techLine">
-                                <b>Технологии:&nbsp;</b> Java 21, Spring 3.3.5, Maven, PostgreSQL 15.2, Docker 27.3.1, Flyway 11.0.0, GitLab, OkHttp 4.11.0,
-                                Telegram API, Postman 11.45.6, S2Geometry 2.0.0
-                            </div>
-                        </div>
-
-                        <div class="experienceItem">
-                            <p class="experienceDates">SELF EMPLOYMENT, 01.05.2022 — 08.11.2023</p>
-
-                            <h4 class="experienceProject">Coffee App</h4>
-                            <div class="experienceDescription">
-                                <p><b>Архитектура:</b> монолит</p>
-                                <p>POS-система для малого бизнеса (кофейни, пекарни).</p>
-                                <p>Разработал с нуля desktop-приложение для управления товарной номенклатурой.</p>
-                                <p>Достижения: самостоятельно спроектировал архитектуру, реализовал функционал и внедрил систему в 3 кофейни
-                                    Санкт-Петербурга.</p>
-                            </div>
-                            <div class="techLine">
-                                <b>Технологии:&nbsp;</b> Java 17, Maven, MySQL, SQLite, JDBC, JavaFX 19
-                            </div>
-                        </div>
+                    <h2 >Опыт работы <span data-experience-years></span></h2>
+                    <div class="experienceSection" id="experience-list">
                     </div>
                 </main>
             </div>
         </div>
     </div>
 </div>
-
+<script src="assets/js/state.js"></script>
+<script src="assets/js/language-detector.js"></script>
+<script src="assets/js/role-switch.js"></script>
+<script src="assets/js/experience.js"></script>
+<script src="assets/js/experience-list.js"></script>
+<div class="role-switch">
+    <button id="role-hr">HR</button>
+    <button id="role-cto">CTO</button>
+</div>
 </body>
 </html>
