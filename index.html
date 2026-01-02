@@ -34,13 +34,17 @@
             <div class="top-right-col">
                 <div class="topRightPanel">
                     <header class="resumeHeader">
-                        <h1>Анатолий Левицкий</h1>
-                        <h3>Software engineer (Middle)</h3>
+                        <div class="lang-switch">
+                            <button id="lang-ru">RU</button>
+                            <span>·</span>
+                            <button id="lang-en">EN</button>
+                        </div>
+                        <h1 data-i18n="name"></h1>
+                        <h3 data-i18n="title"></h3>
                     </header>
                     <section>
-                        <h2>PROFILE</h2>
-                        <p>Software engineer с опытом технического руководства. После 10+ лет в управлении креативными проектами полностью перешел в IT, где
-                            сочетаю технические навыки (Spring, Kafka, PostgreSQL) и управленческую экспертизу.</p>
+                        <h2 data-i18n="profile"></h2>
+                        <p data-i18n="profile_text" class="profileText"></p>
                     </section>
                 </div>
             </div>
@@ -51,7 +55,7 @@
                 <aside class="leftPanel">
                     <div class="stickyContainer">
                         <div>
-                            <h2>CONTACT</h2>
+                            <h2 data-i18n="contact"></h2>
 
                             <div class="contactItem">
                                 <i class="fas fa-phone contactIcon"></i>
@@ -80,7 +84,7 @@
                         </div>
 
                         <div class="skillsSection">
-                            <h2>TECH STACK</h2>
+                            <h2 data-i18n="tech_stack"></h2>
                             <div class="skillsList">
                                 Java, Spring, Maven / Gradle, MySQL / SQLite / PostgreSQL, Apache-Kafka, Docker, Flyway, GitLab, YouTrack API / Jira API, OkHttp
                                 / Apache POI / Telegram API / Postman / Swagger, JDBC, MinIO (S3), PostGIS / GeoServer / S2Geometry, JavaFX
@@ -93,12 +97,10 @@
             <div class="bottom-right-col">
                 <!--            Правая нижняя панель-->
                 <main class="rightPanel">
-                    <div class="controls">
-                        <button id="lang-ru">RU</button>
-                        <button id="lang-en">EN</button>
-                    </div>
-
-                    <h2 >Опыт работы <span data-experience-years></span></h2>
+                    <h2>
+                        <span data-i18n="experience"></span>
+                        <span data-experience-years></span>
+                    </h2>
                     <div class="experienceSection" id="experience-list">
                     </div>
                 </main>
@@ -107,6 +109,7 @@
     </div>
 </div>
 <script src="assets/js/state.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/language-detector.js"></script>
 <script src="assets/js/role-switch.js"></script>
 <script src="assets/js/experience.js"></script>

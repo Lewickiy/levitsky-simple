@@ -1,7 +1,7 @@
 // Загружаем meta.json
 async function loadMeta() {
   try {
-    const response = await fetch("/data/meta.json");
+    const response = await fetch("data/meta.json");
     if (!response.ok) {
       console.error("Failed to load meta.json:", response.status, response.statusText);
       return null;
