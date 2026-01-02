@@ -1,5 +1,4 @@
 body {
-    /*font-family: Arial, Helvetica, sans-serif;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +26,7 @@ body {
 .role-switch {
   position: fixed;
   top: 50%;
-  right: -10px;              /* “вшито” в край */
+    right: -10px;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -38,7 +37,6 @@ body {
   z-index: 1000;
 }
 
-/* Кнопки */
 .role-switch button {
   all: unset;
   cursor: pointer;
@@ -53,13 +51,11 @@ body {
   white-space: nowrap;
 }
 
-/* Hover */
 .role-switch button:hover {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }
 
-/* Активное состояние */
 .role-switch button.active {
   background: #ffffff;
   color: #0a335c;
@@ -100,13 +96,13 @@ h2 {
 
 .topLeftPanel {
     background-color: #0a335c;
-    display: flex; /* Добавляем flex */
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%; /* Или конкретная высота, например 250px */
-    padding: 20px; /* Добавляем отступы */
-    box-sizing: border-box; /* Чтобы padding не влиял на общие размеры */
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .photoWrapper {
@@ -136,7 +132,6 @@ h2 {
 }
 
 /*TOP RIGHT PANEL START*/
-
 .topRightPanel {
     background-color: #0a335c;
     color: whitesmoke;
@@ -368,8 +363,8 @@ h2 {
 
 .experienceHeader {
     display: flex;
-    justify-content: space-between; /* даты слева, компания справа */
-    margin-bottom: 2px; /* небольшой отступ до названия проекта */
+    justify-content: space-between;
+    margin-bottom: 2px;
     font-weight: bold;
     font-size: 0.95em;
 }
@@ -473,13 +468,13 @@ h2 {
     }
 
     .resume-wrapper {
-        transform: scale(0.97); /* уменьшает весь документ */
+        transform: scale(0.97);
         transform-origin: top center;
         width: 110%;
     }
 
     .experienceItem {
-        page-break-inside: auto; /* разрешаем перенос внутри */
+        page-break-inside: auto;
         margin-bottom: 3px;
         padding-bottom: 2px;
     }
@@ -487,10 +482,9 @@ h2 {
     .experienceDescription p,
     .experienceDescription ul,
     .experienceDescription li {
-        margin-bottom: 2px; /* меньше отступы внутри текста */
+        margin-bottom: 2px;
     }
 
-    /* убираем пустые хвосты */
     * {
         orphans: 2;
         widows: 2;
