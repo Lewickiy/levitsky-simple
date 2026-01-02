@@ -1,5 +1,5 @@
 async function loadExperience() {
-  const res = await fetch("/data/experience.json");
+  const res = await fetch("data/experience.json");
   const { experience } = await res.json();
   renderExperience(experience);
 }
