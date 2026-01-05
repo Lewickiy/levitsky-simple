@@ -157,64 +157,11 @@
       }
     },
     {
-      "id": "self_yt2j_2024",
-      "company": "SELF EMPLOYED",
-      "period": {
-        "from": "2024-12-01",
-        "to": "2025-02-01"
-      },
-      "project": {
-        "name": {
-          "ru": "Project Transfer (YT2J)",
-          "en": "Project Transfer (YT2J)"
-        },
-        "architecture": "Monolith"
-      },
-      "technologies": [
-        "Java 21",
-        "Maven",
-        "Jira API",
-        "YouTrack API"
-      ],
-      "content": {
-        "hr": {
-          "ru": {
-            "summary": "Система автоматической миграции задач между YouTrack и Jira.",
-            "responsibilities": [
-              "Реализовал автоматическую миграцию более 20 000 задач",
-              "Обеспечил перенос статусов, комментариев, связей и вложений"
-            ]
-          },
-          "en": {
-            "summary": "Automated task migration system from YouTrack to Jira.",
-            "responsibilities": [
-              "Migrated over 20,000 tasks across 8 projects",
-              "Ensured migration of statuses, comments, links and attachments"
-            ]
-          }
-        },
-        "cto": {
-          "ru": {
-            "responsibilities": [
-              "Интеграция с внешними REST API",
-              "Обеспечение целостности и корректности данных"
-            ]
-          },
-          "en": {
-            "responsibilities": [
-              "Integrated with external REST APIs",
-              "Ensured data consistency and migration reliability"
-            ]
-          }
-        }
-      }
-    },
-    {
       "id": "project_city_drive_booster_2024",
       "company": "PERSONAL PROJECT",
       "period": {
-        "from": "2024-10-01",
-        "to": "2025-06-20"
+        "from": "2022-10-01",
+        "to": "2023-10-20"
       },
       "project": {
         "name": {
