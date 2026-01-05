@@ -2,15 +2,15 @@
   "experience": [
     {
       "id": "element_microservices_2024",
-      "company": "ELEMENT",
+      "company": "ELEMENT-SOFT",
       "period": {
         "from": "2024-12-15",
-        "to": "present"
+        "to": "2025-08-15"
       },
       "project": {
         "name": {
-          "ru": "Система мониторинга рабочего персонала и техники",
-          "en": "Workforce and Equipment Monitoring System"
+          "ru": "Система мониторинга персонала и техники на опасных производственных объектах",
+          "en": "Workforce and Equipment Monitoring System for Hazardous Sites"
         },
         "architecture": "Microservices"
       },
@@ -35,52 +35,59 @@
       "content": {
         "hr": {
           "ru": {
-            "summary": "Поддержка и развитие системы мониторинга персонала и техники после перехода на микросервисную архитектуру.",
+            "summary": "Поддержка и стабилизация системы мониторинга персонала и техники на опасных производственных объектах после миграции с монолитной архитектуры на микросервисы. Система используется для контроля безопасных и запретных зон, а также оперативного реагирования на нарушения.",
             "responsibilities": [
-              "Провёл ревизию системы после миграции с монолита",
-              "Устранил критические технические и архитектурные проблемы",
-              "Повысил стабильность и надёжность системы"
+              "Поддержка production-системы в условиях нестабильной микросервисной архитектуры",
+              "Устранение критических ошибок, возникших после миграции с монолита",
+              "Повышение надёжности и предсказуемости работы системы",
+              "Работа с сервисами обработки геоданных и событий мониторинга",
+              "Взаимодействие с командой для оперативного решения инцидентов"
             ]
           },
           "en": {
-            "summary": "Maintained and improved a workforce and equipment monitoring system after migration to microservices.",
+            "summary": "Maintained and stabilized a workforce and equipment monitoring system for hazardous industrial sites after migration from a monolithic architecture to microservices. The system is used to control restricted zones and ensure operational safety.",
             "responsibilities": [
-              "Performed system audit after monolith-to-microservices migration",
-              "Resolved critical architectural and technical issues",
-              "Improved system stability and reliability"
+              "Supported a production system with an unstable microservice architecture",
+              "Resolved critical issues caused by monolith-to-microservices migration",
+              "Improved system reliability and operational stability",
+              "Worked with services processing geospatial data and monitoring events",
+              "Collaborated with the team to handle production incidents"
             ]
           }
         },
         "cto": {
           "ru": {
             "responsibilities": [
-              "Провёл архитектурный аудит микросервисов",
-              "Исправил проблемы взаимодействия сервисов и работы с Kafka",
-              "Участвовал в развитии API и интеграций"
+              "Участие в стабилизации микросервисной архитектуры после неполной миграции с монолита",
+              "Анализ и устранение проблем высокой связности между сервисами",
+              "Работа с Kafka и асинхронным взаимодействием сервисов",
+              "Поддержка и развитие REST API в распределённой системе",
+              "Эксплуатация геоинформационных компонентов (PostGIS, GeoServer)"
             ]
           },
           "en": {
             "responsibilities": [
-              "Conducted architectural audit of microservices",
-              "Resolved inter-service communication and Kafka-related issues",
-              "Participated in API and integration design"
+              "Participated in stabilizing a microservice architecture after an incomplete monolith migration",
+              "Analyzed and resolved issues caused by excessive coupling between services",
+              "Worked with Kafka and asynchronous inter-service communication",
+              "Maintained and evolved REST APIs in a distributed system",
+              "Operated geospatial components (PostGIS, GeoServer)"
             ]
           }
         }
       }
     },
-
     {
-      "id": "element_monolith_2023",
-      "company": "ELEMENT",
+      "id": "element_lokro_2023",
+      "company": "ELEMENT-SOFT",
       "period": {
         "from": "2023-11-09",
         "to": "2024-12-15"
       },
       "project": {
         "name": {
-          "ru": "Система контроля безопасности производственного процесса",
-          "en": "Industrial Safety Control System"
+          "ru": "Система мониторинга и аудита промышленных измерений",
+          "en": "Industrial Measurement Monitoring and Audit Platform"
         },
         "architecture": "Monolith"
       },
@@ -105,41 +112,50 @@
       "content": {
         "hr": {
           "ru": {
-            "summary": "Разработка системы промышленной безопасности для энергетической компании.",
+            "summary": "Backend-разработка системы учёта радиационных измерений для закрытого контура АЭС. Проект был унаследован без документации и онбординга после ухода предыдущей команды. Backend-команда самостоятельно формализовывала требования, оценивала задачи и реализовывала функциональность. В процессе проект был полностью переписан в связи с расширением и изменением требований.",
             "responsibilities": [
-              "Участвовал в обсуждении требований заказчика",
-              "Оценивал задачи и предлагал технические решения",
-              "Разрабатывал бизнес-логику системы"
+              "Реализация backend-логики на всех слоях (DTO, entities, repositories, services, REST)",
+              "PostgreSQL + Flyway для управления схемой базы данных",
+              "MinIO (S3) для хранения планов помещений и панорамных изображений",
+              "PostGIS для пространственных данных и позиционирования измерений",
+              "Spring AOP — реализация унифицированного модуля аудита операций",
+              "Монолитная архитектура"
             ]
           },
           "en": {
-            "summary": "Development of an industrial safety control system for an energy company.",
+            "summary": "Backend development of a radiation measurement tracking system for a nuclear power plant operating in a closed network environment. The project was inherited without documentation or onboarding after the previous team had left. The backend team independently formalized requirements, estimated tasks, and implemented functionality. Over time, the system was completely rewritten due to significant expansion and changes in requirements.",
             "responsibilities": [
-              "Participated in requirements discussions",
-              "Estimated tasks and proposed technical solutions",
-              "Developed core business logic"
+              "Implemented backend logic across all layers (DTOs, entities, repositories, services, REST APIs)",
+              "PostgreSQL with Flyway for database schema versioning and migrations",
+              "MinIO (S3-compatible storage) for floor plans and panoramic images",
+              "PostGIS for spatial data and positioning of measurements",
+              "Spring AOP — implementation of a unified audit logging module",
+              "Monolithic architecture"
             ]
           }
         },
         "cto": {
           "ru": {
             "responsibilities": [
-              "Проектировал бизнес-логику с применением DDD",
-              "Использовал AOP и REST API",
-              "Участвовал в выборе технологического стека"
+              "Работа с унаследованным монолитным кодом без документации",
+              "Полный рефакторинг и переписывание системы под изменившиеся требования",
+              "Реализация сквозного аудита операций с использованием Spring AOP",
+              "Работа с пространственными данными (PostGIS) и объектным хранилищем (MinIO)",
+              "Проектирование REST API и бизнес-логики на Spring Framework"
             ]
           },
           "en": {
             "responsibilities": [
-              "Designed business logic using DDD principles",
-              "Applied AOP and RESTful API",
-              "Participated in technology stack selection"
+              "Worked with a legacy monolithic codebase without documentation",
+              "Performed a full refactor and rewrite of the system to meet evolving requirements",
+              "Implemented cross-cutting audit logging using Spring AOP",
+              "Worked with spatial data (PostGIS) and object storage (MinIO)",
+              "Designed REST APIs and core business logic using the Spring Framework"
             ]
           }
         }
       }
     },
-
     {
       "id": "self_yt2j_2024",
       "company": "Self-employed",
