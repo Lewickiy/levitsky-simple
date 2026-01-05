@@ -1,7 +1,7 @@
 {
   "experience": [
     {
-      "id": "element_microservices_2024",
+      "id": "element_pst_2024",
       "company": "ELEMENT-SOFT",
       "period": {
         "from": "2024-12-15",
@@ -158,7 +158,7 @@
     },
     {
       "id": "self_yt2j_2024",
-      "company": "Self-employed",
+      "company": "SELF EMPLOYED",
       "period": {
         "from": "2024-12-01",
         "to": "2025-02-01"
@@ -204,6 +204,86 @@
             "responsibilities": [
               "Integrated with external REST APIs",
               "Ensured data consistency and migration reliability"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "project_city_drive_booster_2024",
+      "company": "PERSONAL PROJECT",
+      "period": {
+        "from": "2024-10-01",
+        "to": "2025-06-20"
+      },
+      "project": {
+        "name": {
+          "ru": "Система автоматизации заданий для каршеринговых перегонщиков",
+          "en": "Task Automation System for Carsharing Vehicle Relocation"
+        },
+        "architecture": "Backend service + Telegram Bot"
+      },
+      "team": {
+        "backend": 1,
+        "qa": 2
+      },
+      "technologies": [
+        "Java 21",
+        "Spring Boot 3",
+        "Gradle",
+        "PostgreSQL",
+        "PostGIS",
+        "Spring Data JPA (Hibernate)",
+        "Flyway",
+        "Apache HttpClient",
+        "Jackson",
+        "Telegram Bot API",
+        "S2 Geometry Library",
+        "MapStruct",
+        "Lombok"
+      ],
+      "content": {
+        "hr": {
+          "ru": {
+            "summary": "Личный проект по автоматизации работы перегонщиков каршеринга. Система снижала необходимость постоянного взаимодействия со смартфоном за рулём, автоматически подбирая и принимая задания по заданным параметрам и уведомляя пользователя через Telegram-бота.",
+            "responsibilities": [
+              "Разработка backend-сервиса для автоматической обработки и принятия заданий",
+              "Реализация Telegram-бота как основного пользовательского интерфейса",
+              "Автоматизация подбора заданий по типу, зоне и радиусу",
+              "Снижение отвлечений водителей от управления транспортным средством",
+              "Оптимизация частоты запросов для снижения нагрузки на внешнюю систему"
+            ]
+          },
+          "en": {
+            "summary": "A personal project focused on automating task management for carsharing vehicle relocation drivers. The system reduced the need for frequent smartphone interaction while driving by automatically selecting and accepting tasks and notifying users via a Telegram bot.",
+            "responsibilities": [
+              "Developed a backend service for automated task processing and acceptance",
+              "Implemented a Telegram bot as the primary user interface",
+              "Automated task selection based on type, zone, and radius",
+              "Reduced driver distraction during vehicle operation",
+              "Optimized request frequency to minimize load on external systems"
+            ]
+          }
+        },
+        "cto": {
+          "ru": {
+            "responsibilities": [
+              "Проектирование backend-сервиса для автоматизации высокочастотных запросов",
+              "Реализация адаптивного polling-механизма с учётом ограничений внешнего API",
+              "Изоляция пользовательских сессий через индивидуальные прокси",
+              "Работа с геопозиционированием и радиусным поиском задач",
+              "Реализация распределённой логики назначения заданий между пользователями",
+              "Разработка stateful Telegram-бота с асинхронной обработкой событий"
+            ]
+          },
+          "en": {
+            "responsibilities": [
+              "Designed a backend service for automating high-frequency task polling",
+              "Implemented adaptive polling mechanisms considering external API limits",
+              "Isolated user sessions using per-user proxy configurations",
+              "Worked extensively with geolocation and radius-based task matching",
+              "Implemented distributed task assignment logic between users",
+              "Developed a stateful Telegram bot with asynchronous event handling"
             ]
           }
         }
