@@ -235,6 +235,75 @@
           }
         }
       }
+    },
+    {
+      "id": "personal_pos_coffee_app",
+      "company": "PERSONAL PROJECT",
+      "period": {
+        "from": "2022-01-15",
+        "to": "2022-10-01"
+      },
+      "project": {
+        "name": {
+          "ru": "POS-система для сети кофеен",
+          "en": "POS System for a Coffee Shop Chain"
+        },
+        "architecture": "Desktop application"
+      },
+      "team": {
+        "backend": 1,
+        "frontend": 1
+      },
+      "technologies": [
+        "Java 17",
+        "Hibernate",
+        "MySQL",
+        "SQLite",
+        "JavaFX",
+        "JDBC"
+      ],
+      "content": {
+        "hr": {
+          "ru": {
+            "summary": "Персональный desktop-проект, разработанный для владельца сети кофеен в Санкт-Петербурге.",
+            "responsibilities": [
+              "Разработал POS-систему для бариста с нуля",
+              "Реализовал учёт товарных остатков и процесс продаж",
+              "Внедрил систему в нескольких кофейнях и занимался поддержкой",
+              "Обеспечил работу приложения при отсутствии интернет-соединения"
+            ]
+          },
+          "en": {
+            "summary": "A personal desktop POS system developed for a coffee shop chain owner in Saint Petersburg.",
+            "responsibilities": [
+              "Developed a POS system for baristas from scratch",
+              "Implemented inventory management and sales processing",
+              "Deployed the system in multiple coffee shops and provided ongoing support",
+              "Ensured offline operation when internet connection was unavailable"
+            ]
+          }
+        },
+        "cto": {
+          "ru": {
+            "responsibilities": [
+              "Спроектировал desktop-приложение на Java без использования Spring",
+              "Реализовал offline-first подход с использованием SQLite",
+              "Настроил синхронизацию локальных данных продаж с центральной MySQL БД",
+              "Разработал UI на JavaFX",
+              "Самостоятельно принимал архитектурные и технологические решения"
+            ]
+          },
+          "en": {
+            "responsibilities": [
+              "Designed a Java desktop application without Spring framework",
+              "Implemented an offline-first approach using SQLite",
+              "Built data synchronization between local SQLite and central MySQL database",
+              "Developed UI using JavaFX",
+              "Independently made architectural and technology decisions"
+            ]
+          }
+        }
+      }
     }
   ]
 }

@@ -1,4 +1,3 @@
-// Загружаем meta.json
 async function loadMeta() {
   try {
     const response = await fetch("data/meta.json");
@@ -13,14 +12,12 @@ async function loadMeta() {
   }
 }
 
-// Вычисляем количество лет опыта
 function calculateExperienceYears(startDate) {
   const start = new Date(startDate);
   const now = new Date();
 
   let years = now.getFullYear() - start.getFullYear();
 
-  // Если ещё не был день рождения в этом году
   const hasNotHadAnniversary =
     now.getMonth() < start.getMonth() ||
     (now.getMonth() === start.getMonth() && now.getDate() < start.getDate());
@@ -30,7 +27,6 @@ function calculateExperienceYears(startDate) {
   return Math.max(0, years);
 }
 
-// Рендерим опыт работы
 async function renderExperienceYears() {
   const meta = await loadMeta();
   if (!meta || !meta.careerStart) return;
@@ -43,5 +39,4 @@ async function renderExperienceYears() {
   });
 }
 
-// Запуск после загрузки DOM
 document.addEventListener("DOMContentLoaded", renderExperienceYears);
