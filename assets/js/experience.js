@@ -1,16 +1,46 @@
-async function loadMeta() {
+async function loadExperienceData() {
   try {
-    const response = await fetch("data/meta.json");
-    if (!response.ok) {
-      console.error("Failed to load meta.json:", response.status, response.statusText);
+    const res = await fetch("data/experience.json");
+    if (!res.ok) {
+      console.error("Failed to load experience.json:", res.status);
       return null;
     }
-    return await response.json();
+    return await res.json();
   } catch (err) {
-    console.error("Error fetching meta.json:", err);
+    console.error("Error fetching experience.json:", err);
     return null;
   }
 }
+
+function getCareerStartFromExperience(experienceList) {
+  if (!Array.isArray(experienceList) || experienceList.length === 0) {
+    return null;
+  }
+
+  return experienceList
+    .map(job => job?.period?.from)
+    .filter(Boolean)
+    .map(date => new Date(date))
+    .sort((a, b) => a - b)[0];
+}
+
+async function renderExperienceYears() {
+  const data = await loadExperienceData();
+  if (!data || !data.experience) return;
+
+  const careerStartDate = getCareerStartFromExperience(data.experience);
+  if (!careerStartDate) return;
+
+  const years = calculateExperienceYears(careerStartDate);
+
+  const elements = document.querySelectorAll("[data-experience-years]");
+  elements.forEach(el => {
+    el.textContent = `${years}+`;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderExperienceYears);
+
 
 function calculateExperienceYears(startDate) {
   const start = new Date(startDate);
@@ -26,17 +56,3 @@ function calculateExperienceYears(startDate) {
 
   return Math.max(0, years);
 }
-
-async function renderExperienceYears() {
-  const meta = await loadMeta();
-  if (!meta || !meta.careerStart) return;
-
-  const years = calculateExperienceYears(meta.careerStart);
-
-  const elements = document.querySelectorAll("[data-experience-years]");
-  elements.forEach(el => {
-    el.textContent = `${years}+`;
-  });
-}
-
-document.addEventListener("DOMContentLoaded", renderExperienceYears);

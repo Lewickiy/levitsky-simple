@@ -45,20 +45,22 @@ body {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
-  background: transparent;
+
+    background: #ffffff;
+    color: #0a335c;
+
   transition: background 0.2s ease, color 0.2s ease;
   white-space: nowrap;
 }
 
-.role-switch button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+
+.role-switch button:not(.active):hover {
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .role-switch button.active {
-  background: #ffffff;
-  color: #0a335c;
+    background: #0a335c;
+    color: #ffffff;
 }
 
 .top-row,
