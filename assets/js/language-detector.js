@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadI18n();
     applyI18n();
     updateLangUI();
+    window.appReady.i18n = true;
+    tryShowApp();
 
     document.getElementById("lang-ru").onclick = () => setLanguage("ru");
     document.getElementById("lang-en").onclick = () => setLanguage("en");

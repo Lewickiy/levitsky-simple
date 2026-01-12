@@ -2,6 +2,8 @@ async function loadExperience() {
   const res = await fetch("data/experience.json");
   const { experience } = await res.json();
   renderExperience(experience);
+    window.appReady.experience = true;
+    tryShowApp();
 }
 
 function renderExperience(list) {
