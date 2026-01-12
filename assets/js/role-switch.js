@@ -19,7 +19,7 @@ function setRole(role) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const savedRole = localStorage.getItem("selectedRole");
-    window.currentRole = savedRole || "hr"; // по умолчанию HR
+    window.currentRole = savedRole || "hr";
 
     updateRoleUI();
 
