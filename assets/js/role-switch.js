@@ -13,10 +13,16 @@ function setRole(role) {
     window.currentRole = role;
     updateRoleUI();
     loadExperience();
+
+    localStorage.setItem("selectedRole", role);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const savedRole = localStorage.getItem("selectedRole");
+    window.currentRole = savedRole || "hr"; // по умолчанию HR
+
     updateRoleUI();
+
     document.getElementById("role-hr").onclick = () => setRole("hr");
     document.getElementById("role-cto").onclick = () => setRole("cto");
 });
