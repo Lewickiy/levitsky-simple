@@ -155,32 +155,6 @@ h2 {
     padding-right: 20px;
 }
 
-.lang-switch {
-    top: 12px;
-    right: 16px;
-    display: flex;
-    gap: 6px;
-    font-size: 12px;
-}
-
-.lang-switch button {
-    all: unset;
-    cursor: pointer;
-    opacity: 0.6;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-}
-
-.lang-switch button.active {
-    opacity: 1;
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-.lang-switch span {
-    opacity: 0.4;
-}
-
 /*LEFT PANEL START*/
 .leftPanel {
     background-color: #0a335c;
