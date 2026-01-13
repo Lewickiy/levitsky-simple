@@ -16,7 +16,7 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Deploy files to FTP and set permissions
+      - name: Deploy files to FTP with correct permissions
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
@@ -25,8 +25,5 @@ jobs:
         run: |
           lftp -c "
             open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
-            mirror -R ./ $FTP_PATH;
-            # выставляем права
-            find $FTP_PATH -type d -exec chmod 755 {} \;
-            find $FTP_PATH -type f -exec chmod 644 {} \;
+            mirror -R ./ $FTP_PATH --verbose --only-newer --parallel=2 --chmod=D755,F644
           "
