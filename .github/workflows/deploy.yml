@@ -1,4 +1,4 @@
-name: Deploy to FTP
+name: Deploy via SFTP
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
+  sftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,14 +16,23 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Deploy files to FTP with correct permissions
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          FTP_PATH: ${{ secrets.FTP_PATH }}
-        run: |
-          lftp -c "
-            open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
-            mirror -R ./ $FTP_PATH --verbose --only-newer --parallel=2 --chmod=D755,F644
-          "
+      - name: Upload files via SFTP
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          source: "./"
+          target: ${{ secrets.FTP_PATH }}
+
+      - name: Set permissions via SSH
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            find ${{ secrets.FTP_PATH }} -type d -exec chmod 755 {} \;
+            find ${{ secrets.FTP_PATH }} -type f -exec chmod 644 {} \;
