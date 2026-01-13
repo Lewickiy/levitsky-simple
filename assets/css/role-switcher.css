@@ -15,15 +15,13 @@
 .role-switch button {
     all: unset;
     cursor: pointer;
-    padding: 12px 18px;
+    padding: 12px 12px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-
     background: #ffffff;
     color: #0a335c;
-
     transition: background 0.2s ease, color 0.2s ease;
     white-space: nowrap;
 }

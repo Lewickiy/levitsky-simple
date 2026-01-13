@@ -156,7 +156,6 @@ h2 {
 }
 
 .lang-switch {
-    position: absolute;
     top: 12px;
     right: 16px;
     display: flex;

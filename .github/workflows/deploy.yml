@@ -13,12 +13,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Sync files to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{secrets.FTP_HOST}}
-          username: ${{secrets.FTP_USER}}
-          password: ${{secrets.FTP_PASSWORD}}
-          local-dir: ./
-          server-dir: ${{secrets.FTP_PATH}}
-          dry-run: false
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy files to FTP and set permissions
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PATH: ${{ secrets.FTP_PATH }}
+        run: |
+          lftp -c "
+            open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
+            mirror -R ./ $FTP_PATH;
+            # выставляем права
+            find $FTP_PATH -type d -exec chmod 755 {} \;
+            find $FTP_PATH -type f -exec chmod 644 {} \;
+          "
