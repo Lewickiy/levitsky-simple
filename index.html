@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/css/controls.css">
+    <link rel="stylesheet" href="assets/css/role-switcher.css">
+    <link rel="stylesheet" href="assets/css/top-menu.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="public/favicon.ico"/>
@@ -43,6 +44,7 @@
 <body>
 <div class="body">
     <div class="resume-wrapper">
+        <div id="top-menu"></div>
         <div class="top-row">
             <div class="top-left-col">
                 <div class="topLeftPanel">
@@ -125,6 +127,7 @@
         </div>
     </div>
 </div>
+<script src="assets/js/layout.js"></script>
 <script src="assets/js/state.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/language-detector.js"></script>
@@ -134,11 +137,6 @@
 <div class="role-switch">
     <button id="role-hr">HR</button>
     <button id="role-cto">CTO</button>
-</div>
-<div class="lang-switch">
-    <button id="lang-ru">RU</button>
-    <span>·</span>
-    <button id="lang-en">EN</button>
 </div>
 </body>
 </html>
