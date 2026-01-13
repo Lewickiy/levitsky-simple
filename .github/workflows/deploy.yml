@@ -1,4 +1,4 @@
-name: Deploy via SFTP
+name: Deploy to FTP
 
 on:
   push:
@@ -6,33 +6,19 @@ on:
       - main
 
 jobs:
-  sftp-deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
-
-      - name: Upload files via SFTP
-        uses: appleboy/scp-action@v0.1.4
+      - name: Sync files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          source: "./"
-          target: ${{ secrets.FTP_PATH }}
-
-      - name: Set permissions via SSH
-        uses: appleboy/ssh-action@v0.1.6
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          script: |
-            find ${{ secrets.FTP_PATH }} -type d -exec chmod 755 {} \;
-            find ${{ secrets.FTP_PATH }} -type f -exec chmod 644 {} \;
+          server: ${{secrets.FTP_HOST}}
+          username: ${{secrets.FTP_USER}}
+          password: ${{secrets.FTP_PASSWORD}}
+          local-dir: ./
+          server-dir: ${{secrets.FTP_PATH}}
+          dry-run: false
