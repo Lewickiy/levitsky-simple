@@ -30,5 +30,9 @@
   "mentor_menu": {
     "ru": "Ментор",
     "en": "Mentor"
+  },
+  "snippet_menu": {
+    "ru": "Сниппеты",
+    "en": "Snippets"
   }
 }
