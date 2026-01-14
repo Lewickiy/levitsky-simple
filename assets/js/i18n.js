@@ -8,13 +8,3 @@ async function loadI18n() {
   }
   i18nDict = await res.json();
 }
-
-function applyI18n() {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.dataset.i18n;
-    const value = i18nDict?.[key]?.[currentLang];
-    if (value) {
-      el.textContent = value;
-    }
-  });
-}
