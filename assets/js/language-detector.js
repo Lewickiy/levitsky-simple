@@ -1,3 +1,5 @@
+const LANG_STORAGE_KEY = "selectedLang";
+
 function detectUserLanguage() {
     const lang = navigator.language || "en";
     return lang.toLowerCase().startsWith("ru") ? "ru" : "en";
@@ -15,11 +17,15 @@ function updateLangUI() {
 
 function setLanguage(lang) {
     if (lang === currentLang) return;
+
     window.currentLang = lang;
+    localStorage.setItem(LANG_STORAGE_KEY, lang);
+
     updateLangUI();
     applyI18n();
     loadExperience();
 }
+
 
 function applyI18n() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -39,10 +45,17 @@ function applyI18n() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    window.currentLang = detectUserLanguage();
+    const savedLang = localStorage.getItem(LANG_STORAGE_KEY);
+    window.currentLang = savedLang || detectUserLanguage();
+
+    if (!savedLang) {
+        localStorage.setItem(LANG_STORAGE_KEY, window.currentLang);
+    }
+
     await loadI18n();
     applyI18n();
     updateLangUI();
+
     window.appReady.i18n = true;
     tryShowApp();
 
