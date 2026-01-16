@@ -1,3 +1,5 @@
+console.log("loaded: language-detector.js");
+
 const LANG_STORAGE_KEY = "selectedLang";
 
 function detectUserLanguage() {
@@ -23,7 +25,18 @@ function setLanguage(lang) {
 
     updateLangUI();
     applyI18n();
-    loadExperience();
+    const page = document.body.dataset.page;
+    if (page === "resume") {
+        loadExperience();
+    }
+
+    if (page === "snippets") {
+        if (window.snippetsState.mode === "list") {
+            renderSnippetsList();
+        } else if (window.snippetsState.mode === "view") {
+            setSnippetsState("view");
+        }
+    }
 }
 
 
@@ -58,7 +71,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     window.appReady.i18n = true;
     tryShowApp();
+});
 
-    document.getElementById("lang-ru").onclick = () => setLanguage("ru");
-    document.getElementById("lang-en").onclick = () => setLanguage("en");
+document.addEventListener("layout:ready", () => {
+    const ru = document.getElementById("lang-ru");
+    const en = document.getElementById("lang-en");
+
+    if (!ru || !en) return;
+
+    ru.onclick = () => setLanguage("ru");
+    en.onclick = () => setLanguage("en");
 });

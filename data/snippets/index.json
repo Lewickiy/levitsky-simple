@@ -1,0 +1,25 @@
+[
+  {
+    "id": "java-pos-system",
+    "title": {
+      "ru": "POS система для сети кофеен",
+      "en": "POS system for coffee shop chain"
+    },
+    "description": {
+      "ru": "Персональный Java-проект: десктопная POS-система для бариста с offline-синхронизацией.",
+      "en": "Personal Java project: desktop POS system with offline synchronization."
+    },
+    "files": {
+      "ru": "java-pos-system.ru.md",
+      "en": "java-pos-system.en.md"
+    },
+    "date": "2019-03",
+    "tags": [
+      "Java",
+      "JavaFX",
+      "SQLite",
+      "MySQL"
+    ],
+    "previewLength": 280
+  }
+]

@@ -1,3 +1,5 @@
+console.log("loaded: i18n.js");
+
 let i18nDict = {};
 
 async function loadI18n() {

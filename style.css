@@ -9,8 +9,6 @@ body {
 }
 
 .resume-wrapper {
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -92,7 +90,6 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
-/*TOP RIGHT PANEL START*/
 .topRightPanel {
     background-color: #0a335c;
     color: whitesmoke;
@@ -155,7 +152,6 @@ h2 {
     padding-right: 20px;
 }
 
-/*LEFT PANEL START*/
 .leftPanel {
     background-color: #0a335c;
     width: 100%;
@@ -246,7 +242,6 @@ h2 {
     text-decoration: underline;
 }
 
-/*RIGHT PANEL START*/
 .rightPanel {
     background-color: whitesmoke;
     width: 100%;

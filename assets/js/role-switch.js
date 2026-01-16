@@ -18,6 +18,7 @@ function setRole(role) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
     const savedRole = localStorage.getItem("selectedRole");
     window.currentRole = savedRole || "hr";
 

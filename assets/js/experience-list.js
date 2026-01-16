@@ -1,3 +1,5 @@
+console.log("loaded: experience-list.js");
+
 async function loadExperience() {
   const res = await fetch("data/experience.json");
   const { experience } = await res.json();
@@ -69,16 +71,19 @@ function renderExperienceItem(job) {
 }
 
 function formatPeriod(from, to) {
-  const opts = { year: "numeric", month: "short" };
-  const fromStr = new Date(from).toLocaleDateString(currentLang, opts);
-  const toStr =
-    to && to !== "present"
-      ? new Date(to).toLocaleDateString(currentLang, opts)
-      : currentLang === "ru"
-        ? "настоящее время"
-        : "Present";
+    const page = document.body.dataset.page;
+    if (page !== "resume") return;
 
-  return `${fromStr} — ${toStr}`;
+    const opts = {year: "numeric", month: "short"};
+    const fromStr = new Date(from).toLocaleDateString(currentLang, opts);
+    const toStr =
+        to && to !== "present"
+            ? new Date(to).toLocaleDateString(currentLang, opts)
+            : currentLang === "ru"
+                ? "настоящее время"
+                : "Present";
+
+    return `${fromStr} — ${toStr}`;
 }
 
 document.addEventListener("DOMContentLoaded", loadExperience);
