@@ -5,7 +5,7 @@ async function renderSnippetView(id) {
     const lang = window.currentLang || "ru";
     const file = snippet.files[lang] || snippet.files.ru;
 
-    const res = await fetch(`data/snippets/${file}`);
+    const res = await fetch(`/data/snippets/${file}`);
     const md = await res.text();
     const html = marked.parse(md);
 
