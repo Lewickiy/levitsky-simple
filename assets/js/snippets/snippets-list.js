@@ -1,7 +1,7 @@
 let snippetsIndex = [];
 
 async function loadSnippetsIndex() {
-    const res = await fetch("data/snippets/index.json");
+    const res = await fetch("/data/snippets/index.json");
     snippetsIndex = await res.json();
 }
 
