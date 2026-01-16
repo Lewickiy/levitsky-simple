@@ -1,24 +1,24 @@
 [
   {
-    "id": "java-pos-system",
+    "id": "gitlab-free-approve-required",
     "title": {
-      "ru": "POS система для сети кофеен",
-      "en": "POS system for coffee shop chain"
+      "ru": "GitLab Free: обязательное одобрение",
+      "en": "GitLab Free: enforce MR approval"
     },
     "description": {
-      "ru": "Персональный Java-проект: десктопная POS-система для бариста с offline-синхронизацией.",
-      "en": "Personal Java project: desktop POS system with offline synchronization."
+      "ru": "Реализовано решение для GitLab Free, чтобы обязательное одобрение Merge Request стало обязательным через CI/CD.",
+      "en": "Solution to enforce mandatory MR approval in GitLab Free via CI/CD pipeline."
     },
     "files": {
-      "ru": "java-pos-system.ru.md",
-      "en": "java-pos-system.en.md"
+      "ru": "gitlab-free-approve-required.ru.md",
+      "en": "gitlab-free-approve-required.en.md"
     },
-    "date": "2019-03",
+    "date": "2024-11",
     "tags": [
-      "Java",
-      "JavaFX",
-      "SQLite",
-      "MySQL"
+      "GitLab",
+      "CI/CD",
+      "Shell",
+      "DevOps"
     ],
     "previewLength": 280
   }
