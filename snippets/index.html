@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <base href="/levitsky-simple/">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/lang-switcher.css">
+    <link rel="stylesheet" href="../assets/css/top-menu.css">
+    <link rel="stylesheet" href="../assets/css/snippet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Prism CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet"/>
+
+    <!-- Marked -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Prism core -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+
+    <!-- Языки -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../public/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Levitsky Anatoliy - Software engineer (Java Spring, Kafka, Postgres) and mentor</title>
+    <meta name="description" id="meta-description"
+          content="Software engineer с опытом технического руководства. Сочетаю технические навыки (Spring, Kafka, PostgreSQL) и управленческую экспертизу.">
+    <meta name="keywords"
+          content="Java разработчик, ментор, резюме программиста, пет-проект, pet-проект, Spring, микросервисы, PostgreSQL, Kafka, backend разработка">
+    <meta name="job-title" content="Software engineer">
+    <meta name="skills" content="Java, Go, Python, JavaScript, Spring Boot, PostgreSQL, Docker, Kafka, CI, RESTful API">
+    <meta name="location" content="Санкт-Петербург, Россия">
+    <meta name="author" content="Анатолий Левицкий">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://levitsky.ru/"/>
+</head>
+<body data-page="snippets">
+<div class="body">
+    <div class="resume-wrapper">
+        <div id="top-menu"></div>
+        <div class="top-row">
+            <div class="top-left-col">
+                <div class="topLeftPanel">
+                    <div class="topContent">
+                        <div class="photoWrapper">
+                            <img src="../public/avatar_levitsky.webp" alt="Аватар Java-разработчик Анатолий Левицкий"
+                                 class="profilePhoto"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-right-col">
+                <div class="topRightPanel">
+                    <header class="resumeHeader">
+                        <h1 data-i18n="name"></h1>
+                        <h3 data-i18n="title"></h3>
+                    </header>
+                    <section>
+                        <h2 data-i18n="profile"></h2>
+                        <p data-i18n="profile_text" class="profileText"></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-row">
+            <div class="snippet-col">
+                <main class="snippetPanel">
+                    <h2 data-i18n="snippet_title"></h2>
+                    <div class="snippetsSection" id="snippets-root"></div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/js/state.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/layout.js"></script>
+<script src="../assets/js/language-detector.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="../assets/js/snippets/snippets-state.js"></script>
+<script src="../assets/js/snippets/snippets-list.js"></script>
+<script src="../assets/js/snippets/snippets-view.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadSnippetsIndex();
+
+    // проверяем, есть ли hash в URL
+    const snippetId = window.location.hash.slice(1); // убираем #
+    if (snippetId) {
+        setSnippetsState("view", snippetId);
+    } else {
+        renderSnippetsList();
+    }
+
+    window.appReady.snippets = true;
+    tryShowApp();
+});
+</script>
+</body>
+</html>

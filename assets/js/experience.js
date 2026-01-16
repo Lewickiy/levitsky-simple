@@ -1,3 +1,5 @@
+console.log("loaded: experience.js");
+
 async function loadExperienceData() {
   try {
     const res = await fetch("data/experience.json");
@@ -43,16 +45,19 @@ document.addEventListener("DOMContentLoaded", renderExperienceYears);
 
 
 function calculateExperienceYears(startDate) {
-  const start = new Date(startDate);
-  const now = new Date();
+    const page = document.body.dataset.page;
+    if (page !== "resume") return;
 
-  let years = now.getFullYear() - start.getFullYear();
+    const start = new Date(startDate);
+    const now = new Date();
 
-  const hasNotHadAnniversary =
-    now.getMonth() < start.getMonth() ||
-    (now.getMonth() === start.getMonth() && now.getDate() < start.getDate());
+    let years = now.getFullYear() - start.getFullYear();
 
-  if (hasNotHadAnniversary) years--;
+    const hasNotHadAnniversary =
+        now.getMonth() < start.getMonth() ||
+        (now.getMonth() === start.getMonth() && now.getDate() < start.getDate());
 
-  return Math.max(0, years);
+    if (hasNotHadAnniversary) years--;
+
+    return Math.max(0, years);
 }
