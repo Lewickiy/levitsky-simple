@@ -1,5 +1,5 @@
 window.snippetsState = {
-    mode: "list",      // list | view
+    mode: "list",
     currentId: null
 };
 
@@ -11,11 +11,9 @@ function setSnippetsState(mode, id = null) {
     window.snippetsState.mode = mode;
     window.snippetsState.currentId = id;
 
-    // обновляем URL
     if (mode === "view" && id) {
         window.history.replaceState(null, "", `${window.location.pathname.split("/").pop()}#${id}`);
     } else if (mode === "list") {
-        // сохраняем полный путь к странице
         window.history.replaceState(null, "", window.location.pathname + window.location.search);
     }
 
