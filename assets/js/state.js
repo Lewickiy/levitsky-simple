@@ -19,4 +19,8 @@ function tryShowApp() {
     if (page === "snippets" && window.appReady.i18n && window.appReady.snippets) {
         document.documentElement.style.visibility = "visible";
     }
+
+    if (page === "mentor") {
+        document.documentElement.style.visibility = "visible";
+    }
 }
