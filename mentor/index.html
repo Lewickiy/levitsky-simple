@@ -4,17 +4,13 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/assets/css/lang-switcher.css">
     <link rel="stylesheet" href="/assets/css/top-menu.css">
-    <link rel="stylesheet" href="/assets/css/snippet.css">
+    <link rel="stylesheet" href="/assets/css/mentor.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
 
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/public/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Levitsky Anatoliy - Snippets</title>
+    <title>Levitsky Anatoliy - mentor</title>
     <meta name="description" id="meta-description"
           content="Software engineer с опытом технического руководства. Сочетаю технические навыки (Spring, Kafka, PostgreSQL) и управленческую экспертизу.">
     <meta name="keywords"
@@ -26,7 +22,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://levitsky.ru/"/>
 </head>
-<body data-page="snippets">
+<body data-page="mentor">
 <div class="body">
     <div class="resume-wrapper">
         <div id="top-menu"></div>
@@ -54,40 +50,39 @@
                 </div>
             </div>
         </div>
-
         <div class="bottom-row">
-            <div class="snippet-col">
-                <main class="snippetPanel">
-                    <h2 data-i18n="snippet_title"></h2>
-                    <div class="snippetsSection" id="snippets-root"></div>
+            <div class="mentor-col">
+                <main class="mentorPanel">
+                    <h2 data-i18n="mentor_title"></h2>
+
+                    <section class="mentor-intro">
+                        <p data-i18n="mentor_intro"></p>
+                    </section>
+
+                    <section class="mentor-method">
+                        <h3 data-i18n="mentor_method_title"></h3>
+                        <p data-i18n="mentor_method_text"></p>
+                    </section>
+
+                    <section class="mentor-skills">
+                        <h3 data-i18n="mentor_skills_title"></h3>
+                        <ul data-i18n="mentor_skills_list"></ul>
+                    </section>
+
+                    <section class="mentor-goals">
+                        <h3 data-i18n="mentor_goals_title"></h3>
+                        <p data-i18n="mentor_goals_text"></p>
+                    </section>
                 </main>
             </div>
         </div>
     </div>
 </div>
+
 <script src="/assets/js/state.js"></script>
 <script src="/assets/js/i18n.js"></script>
 <script src="/assets/js/layout.js"></script>
 <script src="/assets/js/language-detector.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="/assets/js/snippets/snippets-state.js"></script>
-<script src="/assets/js/snippets/snippets-list.js"></script>
-<script src="/assets/js/snippets/snippets-view.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-    await loadSnippetsIndex();
-
-    const snippetId = window.location.hash.slice(1);
-    if (snippetId) {
-        setSnippetsState("view", snippetId);
-    } else {
-        renderSnippetsList();
-    }
-
-    window.appReady.snippets = true;
-    tryShowApp();
-});
-</script>
 </body>
 </html>

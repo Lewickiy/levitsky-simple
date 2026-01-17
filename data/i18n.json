@@ -38,5 +38,49 @@
     "snippet_title": {
     "ru": "Сниппеты",
     "en": "Snippets"
+    },
+  "mentor_title": {
+    "ru": "Менторство и обучение",
+    "en": "Mentorship & Learning"
+  },
+  "mentor_intro": {
+    "ru": "Я помогаю разработчикам и командам развиваться в Java, микросервисах и архитектуре. Мои сессии помогают быстрее освоить практические навыки.",
+    "en": "I help developers and teams grow in Java, microservices, and architecture. My sessions accelerate practical skill acquisition."
+  },
+  "mentor_method_title": {
+    "ru": "Уникальная методика",
+    "en": "Unique Methodology"
+  },
+  "mentor_method_text": {
+    "ru": "Мой подход сочетает теорию с практическими упражнениями и разбором реальных проектов.",
+    "en": "My approach combines theory with hands-on exercises and real project case studies."
+  },
+  "mentor_skills_title": {
+    "ru": "Чему можно научиться",
+    "en": "Skills You Will Gain"
+  },
+  "mentor_skills_list": {
+    "ru": [
+      "Java и Spring",
+      "Микросервисы",
+      "Kafka и очереди сообщений",
+      "PostgreSQL и работа с БД",
+      "Архитектура приложений"
+    ],
+    "en": [
+      "Java & Spring",
+      "Microservices",
+      "Kafka & messaging",
+      "PostgreSQL & databases",
+      "Application architecture"
+    ]
+  },
+  "mentor_goals_title": {
+    "ru": "Цели обучения",
+    "en": "Learning Goals"
+  },
+  "mentor_goals_text": {
+    "ru": "После наших сессий вы сможете проектировать архитектуру, писать поддерживаемый код и внедрять лучшие практики в проекты.",
+    "en": "After our sessions, you'll be able to design architecture, write maintainable code, and implement best practices in projects."
   }
 }
