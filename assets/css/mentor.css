@@ -18,7 +18,7 @@
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 15px;
-    padding: 10px 15px 4px 15px;
+    padding: 15px 15px 4px 15px;
     border-bottom: none;
 }
 
@@ -43,16 +43,21 @@
     color: #0a335c;
     font-size: 1.2em;
     font-weight: bold;
-    padding: 10px 15px 4px 15px;
+    padding: 10px 15px 0 15px;
 }
 
 .mentorPanel p, .mentorPanel ul {
     font-size: 1em;
     line-height: 1.5;
     color: #333;
-    padding: 10px 15px 4px 15px;
+    padding: 0 15px 4px 15px;
 }
 
 .mentorPanel ul {
+    padding-left: 45px;
     list-style-type: circle;
+}
+
+.mentorPanel li {
+    margin-bottom: 6px;
 }
