@@ -1,5 +1,6 @@
 html {
     visibility: hidden;
+    overflow-y: scroll;
 }
 
 body {
