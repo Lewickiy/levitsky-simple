@@ -25,6 +25,7 @@ function setLanguage(lang) {
 
     updateLangUI();
     applyI18n();
+
     const page = document.body.dataset.page;
     if (page === "resume") {
         loadExperience();
@@ -39,14 +40,16 @@ function setLanguage(lang) {
     }
 }
 
-
 function applyI18n() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
     const value = i18nDict?.[key]?.[currentLang];
     if (!value) return;
 
-    if (value.includes("\n")) {
+    if (Array.isArray(value)) {
+      // Если value — массив, создаём <li> для каждого элемента
+      el.innerHTML = value.map(item => `<li>${item}</li>`).join("");
+    } else if (value.includes("\n")) {
       el.innerHTML = value
         .split("\n\n")
         .map(p => `<p>${p}</p>`)
