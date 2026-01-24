@@ -1,0 +1,44 @@
+{
+  "resume": {
+    "ru": {
+      "title": "Анатолий Левицкий — Java Software Engineer",
+      "description": "Java backend-разработчик. Spring, микросервисы, Kafka, PostgreSQL. Архитектура и реальные проекты.",
+      "locale": "ru_RU",
+      "url": "https://levitsky.ru/"
+    },
+    "en": {
+      "title": "Anatoliy Levitsky — Java Software Engineer",
+      "description": "Java backend engineer focused on Spring, microservices, Kafka, and PostgreSQL.",
+      "locale": "en_US",
+      "url": "https://levitsky.ru/"
+    }
+  },
+  "mentor": {
+    "ru": {
+      "title": "Менторство по Java и архитектуре — Анатолий Левицкий",
+      "description": "Индивидуальное обучение Java, микросервисам и архитектуре. Практика и реальные проекты.",
+      "locale": "ru_RU",
+      "url": "https://levitsky.ru/mentor/"
+    },
+    "en": {
+      "title": "Java & Architecture Mentorship — Anatoliy Levitsky",
+      "description": "Personal mentorship in Java, microservices, and software architecture.",
+      "locale": "en_US",
+      "url": "https://levitsky.ru/mentor/"
+    }
+  },
+  "snippets": {
+    "ru": {
+      "title": "Сниппеты и примеры кода — Java и архитектура",
+      "description": "Практические примеры кода и архитектурные решения для backend-разработки.",
+      "locale": "ru_RU",
+      "url": "https://levitsky.ru/snippets/"
+    },
+    "en": {
+      "title": "Code Snippets & Examples — Java & Architecture",
+      "description": "Practical code snippets and architectural examples for backend developers.",
+      "locale": "en_US",
+      "url": "https://levitsky.ru/snippets/"
+    }
+  }
+}

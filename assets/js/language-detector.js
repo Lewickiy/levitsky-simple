@@ -25,6 +25,7 @@ function setLanguage(lang) {
 
     updateLangUI();
     applyI18n();
+    applyOG();
 
     const page = document.body.dataset.page;
     if (page === "resume") {
@@ -69,7 +70,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     await loadI18n();
+    await loadOG()
     applyI18n();
+
     updateLangUI();
 
     window.appReady.i18n = true;
