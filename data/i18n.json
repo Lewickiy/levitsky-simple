@@ -20,12 +20,12 @@
     "en": "Anatoliy Levitsky"
   },
   "title": {
-    "ru": "Software engineer",
-    "en": "Software Engineer"
+    "ru": "Backend engineer",
+    "en": "Backend Engineer"
   },
   "profile_text": {
-    "ru": "Software engineer с опытом технического лидерства и архитектурных решений.\n\nСпециализируюсь на backend-разработке (Java, Spring, Kafka, PostgreSQL), совмещаю инженерное мышление с ответственностью за результат, команду и технические решения.",
-    "en": "Software engineer with experience in technical leadership and system design.\n\nI specialize in backend development (Java, Spring, Kafka, PostgreSQL), combining strong engineering skills with ownership, decision-making, and a product-oriented mindset."
+    "ru": "Backend Engineer с опытом технического лидерства и архитектурных решений.\n\nСпециализируюсь на backend-разработке (Java, Spring, Kafka, PostgreSQL), совмещаю инженерное мышление с ответственностью за результат, команду и технические решения.",
+    "en": "Backend Engineer with experience in technical leadership and system design.\n\nI specialize in backend development (Java, Spring, Kafka, PostgreSQL), combining strong engineering skills with ownership, decision-making, and a product-oriented mindset."
   },
   "mentor_menu": {
     "ru": "Ментор",
