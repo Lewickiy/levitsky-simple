@@ -23,6 +23,8 @@ function setLanguage(lang) {
     window.currentLang = lang;
     localStorage.setItem(LANG_STORAGE_KEY, lang);
 
+    document.documentElement.lang = lang;
+
     updateLangUI();
     applyI18n();
     applyOG();
@@ -48,7 +50,6 @@ function applyI18n() {
     if (!value) return;
 
     if (Array.isArray(value)) {
-      // Если value — массив, создаём <li> для каждого элемента
       el.innerHTML = value.map(item => `<li>${item}</li>`).join("");
     } else if (value.includes("\n")) {
       el.innerHTML = value
@@ -68,6 +69,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!savedLang) {
         localStorage.setItem(LANG_STORAGE_KEY, window.currentLang);
     }
+
+    document.documentElement.lang = window.currentLang;
 
     await loadI18n();
     await loadOG()

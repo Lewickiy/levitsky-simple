@@ -20,6 +20,7 @@ function applyOG() {
 
     const metaTags = [
         {property: "og:title", content: data.title},
+        {property: "og:locale", content: data.locale},
         {property: "og:description", content: data.description},
         {property: "og:image", content: data.image},
         {property: "og:url", content: data.url},
