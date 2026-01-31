@@ -1,179 +1,252 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/css/role-switcher.css">
-    <link rel="stylesheet" href="assets/css/lang-switcher.css">
-    <link rel="stylesheet" href="assets/css/top-menu.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="public/favicon.ico"/>
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Levitsky Anatoliy. Backend Engineer (Java, Spring) — Microservices, Kafka, PostgreSQL</title>
-    <meta name="description" id="meta-description"
-          content="Backend Engineer (Java, Spring) — Microservices, Kafka, PostgreSQL">
+
+    <title>Анатолий Левицкий — Backend Engineer (Java, Spring, Kafka)</title>
+
+    <meta name="description"
+          content="Backend Engineer (Java, Spring, Kafka, PostgreSQL). Микросервисы, архитектура, production-системы."/>
     <meta name="keywords"
-          content="Java разработчик, ментор, резюме программиста, пет-проект, pet-проект, Spring, микросервисы, PostgreSQL, Kafka, backend разработка">
-    <meta name="job-title" content="Software engineer">
-    <meta name="skills" content="Java, Go, Python, JavaScript, Spring Boot, PostgreSQL, Docker, Kafka, CI, RESTful API">
-    <meta name="location" content="Санкт-Петербург, Россия">
-    <meta name="author" content="Anatoliy Levitsky">
-    <meta name="robots" content="index, follow">
+          content="Java разработчик, Backend Engineer, Spring, Kafka, PostgreSQL, микросервисы, резюме"/>
+    <meta name="author" content="Anatoliy Levitsky"/>
+    <meta name="robots" content="index, follow"/>
 
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="https://levitsky.ru/public/og-preview.png">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Levitsky">
-    <meta property="og:locale" content="">
-    <meta property="og:locale:alternate" content="ru_RU">
-    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:title" content="Анатолий Левицкий — Backend Engineer"/>
+    <meta property="og:description"
+          content="Java / Spring / Kafka / PostgreSQL. Архитектура, микросервисы, production."/>
+    <meta property="og:image" content="https://levitsky.ru/public/og-preview.png"/>
+    <meta property="og:url" content="https://levitsky.ru/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Levitsky"/>
+    <meta property="og:locale" content="ru_RU"/>
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="https://levitsky.ru/public/og-preview.png">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Анатолий Левицкий — Backend Engineer"/>
+    <meta name="twitter:description"
+          content="Java / Spring / Kafka / PostgreSQL. Архитектура и production-системы."/>
+    <meta name="twitter:image" content="https://levitsky.ru/public/og-preview.png"/>
 
     <link rel="canonical" href="https://levitsky.ru/"/>
+    <link rel="icon" href="public/favicon.ico"/>
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) {
-                if (document.scripts[j].src === r) {
-                    return;
-                }
-            }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-        ym(102162834, 'init', {webvisor: true, clickmap: true, accurateTrackBounce: true, trackLinks: true});
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/102162834" style="position:absolute; left:-9999px;" alt=""/></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () {
-                (c[a].q = c[a].q || []).push(arguments)
-            };
-            t = l.createElement(r);
-            t.async = 1;
-            t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "v3c8iycdmg");
-    </script>
-
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="assets/css/lang-switcher.css"/>
+    <link rel="stylesheet" href="assets/css/top-menu.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 </head>
+
 <body data-page="resume">
 <div class="body">
     <div class="resume-wrapper">
-        <div id="top-menu"></div>
+        <header class="top-menu">
+            <nav class="top-menu__nav">
+                <div class="left">
+                    <a href="/" class="logo">CV</a>
+                </div>
+                <div class="top-menu__actions">
+                    <div class="lang-switch">
+                        <button id="lang-ru">RU</button>
+                        <span>·</span>
+                        <button id="lang-en">EN</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <div class="top-row">
             <div class="top-left-col">
                 <div class="topLeftPanel">
-                    <div class="topContent">
-                        <div class="photoWrapper">
-                            <img src="public/avatar_levitsky.webp" alt="Аватар Java-разработчик Анатолий Левицкий" class="profilePhoto"/>
-                        </div>
+                    <div class="photoWrapper">
+                        <img src="public/avatar_levitsky.webp"
+                             alt="Анатолий Левицкий — Backend Engineer"
+                             class="profilePhoto"/>
                     </div>
                 </div>
             </div>
             <div class="top-right-col">
                 <div class="topRightPanel">
                     <header class="resumeHeader">
-                        <h1 data-i18n="name"></h1>
-                        <h3 data-i18n="title"></h3>
+                        <h1>Анатолий Левицкий</h1>
+                        <h3>Backend Engineer</h3>
                     </header>
                     <section>
-                        <h2 data-i18n="profile"></h2>
-                        <div data-i18n="profile_text" class="profileText"></div>
+                        <h2>Профиль</h2>
+                        <p>Backend Engineer с опытом технического лидерства и архитектурных решений.</p>
+                        <p>Специализируюсь на backend-разработке (Java, Spring, Kafka, PostgreSQL),
+                            совмещаю инженерное мышление с ответственностью за результат и качество системы.</p>
                     </section>
                 </div>
             </div>
         </div>
-
         <div class="bottom-row">
             <div class="bottom-left-col">
                 <aside class="leftPanel">
                     <div class="stickyContainer">
-                        <div>
-                            <h2 data-i18n="contact"></h2>
-                            
+                        <section>
+                            <h2>Контакты</h2>
                             <div class="contactItem">
-                                <i class="fas fa-phone contactIcon"></i>
+                                <i class="fas fa-phone"></i>
                                 <a href="tel:+79114281854">+7 (911) 428-18-54</a>
                             </div>
-
                             <div class="contactItem">
-                                <i class="fas fa-envelope contactIcon"></i>
+                                <i class="fas fa-envelope"></i>
                                 <a href="mailto:lewickiy@gmail.com">lewickiy@gmail.com</a>
                             </div>
-
                             <div class="contactItem">
-                                <i class="fab fa-telegram contactIcon"></i>
+                                <i class="fab fa-telegram"></i>
                                 <a href="https://t.me/alewickiy">@alewickiy</a>
                             </div>
-
                             <div class="contactItem">
-                                <i class="fas fa-globe contactIcon"></i>
-                                <a href="https://levitsky.ru/">levitsky.ru</a>
-                            </div>
-
-                            <div class="contactItem">
-                                <i class="fab fa-gitlab contactIcon"></i>
+                                <i class="fab fa-github"></i>
                                 <a href="https://github.com/Lewickiy">github.com/Lewickiy</a>
                             </div>
-
                             <div class="contactItem">
-                                <i class="fab fa-linkedin contactIcon"></i>
-                                <a href="https://www.linkedin.com/in/lewickiy/">lewickiy</a>
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/lewickiy/">LinkedIn</a>
                             </div>
-                        </div>
-
-                        <div class="skillsSection">
-                            <h2 data-i18n="tech_stack"></h2>
+                        </section>
+                        <section class="skillsSection">
+                            <h2>Стек технологий</h2>
                             <div class="skillsList">
                                 Java, Spring, Maven / Gradle, MySQL / SQLite / PostgreSQL, Apache-Kafka, Docker, Flyway, GitLab, YouTrack API / Jira API, OkHttp
                                 / Apache POI / Telegram API / Postman / Swagger, JDBC, MinIO (S3), PostGIS / GeoServer / S2Geometry, JavaFX
                             </div>
-                        </div>
-
+                        </section>
                     </div>
                 </aside>
             </div>
             <div class="bottom-right-col">
                 <main class="rightPanel">
-                    <h2>
-                        <span data-i18n="experience"></span>
-                        <span data-experience-years></span>
-                    </h2>
-                    <div class="experienceSection" id="experience-list">
-                    </div>
+                    <section class="experienceSection">
+                        <h2>Профессиональный опыт</h2>
+                        <div class="experienceItem">
+                            <div class="experienceHeader">
+                                <span class="experienceDates">дек. 2024 г. — авг. 2025 г.</span>
+                                <span class="experienceCompany"><strong>ELEMENT-SOFT</strong></span>
+                            </div>
+                            <div class="experienceProject">
+                                Система мониторинга персонала и техники на опасных производственных объектах
+                                (Microservices)
+                            </div>
+                            <div class="experienceTeam">
+                                <b>Команда:</b> Backend: 2 | Frontend: 2 | QA: 2
+                            </div>
+                            <div class="experienceDescription">
+                                <ul>
+                                    <li>Участие в стабилизации микросервисной архитектуры после неполной миграции с
+                                        монолита
+                                    </li>
+                                    <li>Анализ и устранение проблем высокой связности между сервисами</li>
+                                    <li>Работа с Kafka и асинхронным взаимодействием сервисов</li>
+                                    <li>Поддержка и развитие REST API в распределённой системе</li>
+                                    <li>Эксплуатация геоинформационных компонентов (PostGIS, GeoServer)</li>
+                                </ul>
+                                <p class="techLine">
+                                    <b>Стек проекта:</b>
+                                    Java 17/21, Spring, Gradle, PostgreSQL, Apache Kafka,
+                                    Flyway, GitLab, Swagger, Postman, PostGIS, GeoServer
+                                </p>
+                            </div>
+                        </div>
+                        <div class="experienceItem">
+                            <div class="experienceHeader">
+                                <span class="experienceDates">нояб. 2023 г. — дек. 2024 г.</span>
+                                <span class="experienceCompany"><strong>ELEMENT-SOFT</strong></span>
+                            </div>
+                            <div class="experienceProject">
+                                Система мониторинга и аудита промышленных измерений
+                                (Monolith)
+                            </div>
+                            <div class="experienceTeam">
+                                <b>Команда:</b> Backend: 2 | QA: 1
+                            </div>
+                            <div class="experienceDescription">
+                                <ul>
+                                    <li>Работа с унаследованным монолитным кодом без документации и онбординга</li>
+                                    <li>Полный рефакторинг и переписывание системы под изменившиеся требования</li>
+                                    <li>Проектирование и развитие REST API</li>
+                                    <li>Управление схемой базы данных с использованием PostgreSQL и Flyway</li>
+                                    <li>Реализация сквозного аудита операций с использованием Spring AOP</li>
+                                    <li>Интеграция объектного хранилища MinIO (S3)</li>
+                                    <li>Работа с пространственными данными (PostGIS)</li>
+                                </ul>
+                                <p class="techLine">
+                                    <b>Стек проекта:</b>
+                                    Java 17, Spring Framework 3.2.4, Gradle,
+                                    PostgreSQL 15.2, Flyway, Docker,
+                                    GitLab, Swagger, Postman,
+                                    Apache POI, MinIO, PostGIS
+                                </p>
+                            </div>
+                        </div>
+                        <div class="experienceItem">
+                            <div class="experienceHeader">
+                                <span class="experienceDates">окт. 2022 г. — сент. 2024 г.</span>
+                                <span class="experienceCompany"><strong>Личный проект</strong></span>
+                            </div>
+                            <div class="experienceProject">
+                                Система автоматизации заданий для каршеринговых перегонщиков
+                                (Backend + Telegram Bot)
+                            </div>
+                            <div class="experienceTeam">
+                                <b>Формат:</b> Solo-разработка
+                            </div>
+                            <div class="experienceDescription">
+                                <ul>
+                                    <li>Проектирование backend-сервиса для автоматизации высокочастотных запросов</li>
+                                    <li>Реализация адаптивного polling-механизма с учётом ограничений внешнего API</li>
+                                    <li>Разработка Telegram-бота как основного пользовательского интерфейса</li>
+                                    <li>Автоматизация подбора заданий по типу, зоне и радиусу</li>
+                                    <li>Работа с геопозиционированием и радиусным поиском</li>
+                                    <li>Изоляция пользовательских сессий через индивидуальные прокси</li>
+                                    <li>Оптимизация частоты запросов для снижения нагрузки</li>
+                                </ul>
+                                <p class="techLine">
+                                    <b>Стек проекта:</b>
+                                    Java 21, Spring Boot 3, Gradle,
+                                    PostgreSQL, PostGIS,
+                                    Spring Data JPA (Hibernate), Flyway,
+                                    Apache HttpClient, Jackson,
+                                    Telegram Bot API, S2 Geometry,
+                                    MapStruct, Lombok
+                                </p>
+                            </div>
+                        </div>
+                        <div class="experienceItem">
+                            <div class="experienceHeader">
+                                <span class="experienceDates">янв. 2022 г. — окт. 2022 г.</span>
+                                <span class="experienceCompany"><strong>Личный проект</strong></span>
+                            </div>
+                            <div class="experienceProject">
+                                POS-система для сети кофеен
+                                (Desktop application)
+                            </div>
+                            <div class="experienceTeam">
+                                <b>Формат:</b> Solo-разработка
+                            </div>
+                            <div class="experienceDescription">
+                                <ul>
+                                    <li>Проектирование и разработка POS-системы с нуля</li>
+                                    <li>Реализация учёта товарных остатков и процесса продаж</li>
+                                    <li>Разработка desktop-интерфейса на JavaFX</li>
+                                    <li>Реализация offline-first подхода с использованием SQLite</li>
+                                    <li>Настройка синхронизации локальных данных с центральной MySQL БД</li>
+                                    <li>Поддержка и эксплуатация системы после внедрения</li>
+                                </ul>
+                                <p class="techLine">
+                                    <b>Стек проекта:</b>
+                                    Java 17, Hibernate,
+                                    MySQL, SQLite,
+                                    JavaFX, JDBC
+                                </p>
+                            </div>
+                        </div>
+                    </section>
                 </main>
             </div>
         </div>
     </div>
-</div>
-<script src="assets/js/state.js"></script>
-<script src="assets/js/i18n.js"></script>
-<script src="assets/js/layout.js"></script>
-<script src="assets/js/og.js"></script>
-<script src="assets/js/language-detector.js"></script>
-<script src="assets/js/role-switch.js"></script>
-<script src="assets/js/experience.js"></script>
-<script src="assets/js/experience-list.js"></script>
-<div class="role-switch">
-    <button id="role-hr">HR</button>
-    <button id="role-cto">CTO</button>
 </div>
 </body>
 </html>
