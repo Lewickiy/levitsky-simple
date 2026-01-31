@@ -48,12 +48,11 @@
                 <div class="left">
                     <a href="/en/" class="logo">CV</a>
                 </div>
-
                 <div class="top-menu__actions">
                     <div class="lang-switch">
-                        <button id="lang-ru">RU</button>
+                        <a href="/" id="lang-ru">RU</a>
                         <span>·</span>
-                        <button id="lang-en">EN</button>
+                        <a href="/en/" id="lang-en">EN</a>
                     </div>
                 </div>
             </nav>
@@ -120,15 +119,13 @@
                                 S2Geometry, JavaFX
                             </div>
                         </section>
-
                     </div>
                 </aside>
             </div>
             <div class="bottom-right-col">
                 <main class="rightPanel">
                     <section class="experienceSection">
-                        <h2>Work Experience</h2>
-
+                        <h2>Experience</h2>
                         <div class="experienceItem">
                             <div class="experienceHeader">
                                 <span class="experienceDates">Dec 2024 — Aug 2025</span>
@@ -263,5 +260,11 @@
         </div>
     </div>
 </div>
+<script>
+    (function () {
+        const isEn = location.pathname.startsWith("/en");
+        document.getElementById(isEn ? "lang-en" : "lang-ru")?.classList.add("active");
+    })();
+</script>
 </body>
 </html>

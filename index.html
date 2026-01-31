@@ -47,9 +47,9 @@
                 </div>
                 <div class="top-menu__actions">
                     <div class="lang-switch">
-                        <button id="lang-ru">RU</button>
+                        <a href="/" id="lang-ru">RU</a>
                         <span>·</span>
-                        <button id="lang-en">EN</button>
+                        <a href="/en/" id="lang-en">EN</a>
                     </div>
                 </div>
             </nav>
@@ -109,8 +109,9 @@
                         <section class="skillsSection">
                             <h2>Стек технологий</h2>
                             <div class="skillsList">
-                                Java, Spring, Maven / Gradle, MySQL / SQLite / PostgreSQL, Apache-Kafka, Docker, Flyway, GitLab, YouTrack API / Jira API, OkHttp
-                                / Apache POI / Telegram API / Postman / Swagger, JDBC, MinIO (S3), PostGIS / GeoServer / S2Geometry, JavaFX
+                                Java, Spring, Maven / Gradle, MySQL / SQLite / PostgreSQL, Apache-Kafka, Docker, Flyway,
+                                GitLab, YouTrack API / Jira API, OkHttp / Apache POI / Telegram API / Postman / Swagger,
+                                JDBC, MinIO (S3), PostGIS / GeoServer / S2Geometry, JavaFX
                             </div>
                         </section>
                     </div>
@@ -119,7 +120,7 @@
             <div class="bottom-right-col">
                 <main class="rightPanel">
                     <section class="experienceSection">
-                        <h2>Профессиональный опыт</h2>
+                        <h2>Опыт работы</h2>
                         <div class="experienceItem">
                             <div class="experienceHeader">
                                 <span class="experienceDates">дек. 2024 г. — авг. 2025 г.</span>
@@ -204,12 +205,8 @@
                                 </ul>
                                 <p class="techLine">
                                     <b>Стек проекта:</b>
-                                    Java 21, Spring Boot 3, Gradle,
-                                    PostgreSQL, PostGIS,
-                                    Spring Data JPA (Hibernate), Flyway,
-                                    Apache HttpClient, Jackson,
-                                    Telegram Bot API, S2 Geometry,
-                                    MapStruct, Lombok
+                                    Java 21, Spring Boot 3, Gradle, PostgreSQL, PostGIS, Spring Data JPA (Hibernate),
+                                    Flyway, Apache HttpClient, Jackson, Telegram Bot API, S2 Geometry, MapStruct, Lombok
                                 </p>
                             </div>
                         </div>
@@ -236,9 +233,7 @@
                                 </ul>
                                 <p class="techLine">
                                     <b>Стек проекта:</b>
-                                    Java 17, Hibernate,
-                                    MySQL, SQLite,
-                                    JavaFX, JDBC
+                                    Java 17, Hibernate, MySQL, SQLite, JavaFX, JDBC
                                 </p>
                             </div>
                         </div>
@@ -248,5 +243,11 @@
         </div>
     </div>
 </div>
+<script>
+    (function () {
+        const isEn = location.pathname.startsWith("/en");
+        document.getElementById(isEn ? "lang-en" : "lang-ru")?.classList.add("active");
+    })();
+</script>
 </body>
 </html>
