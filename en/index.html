@@ -174,7 +174,48 @@
             <div class="bottom-right-col">
                 <main class="rightPanel">
                     <section class="experienceSection">
-                        <h2>Experience</h2>
+                        <h2>Experience <span id="experienceYears"></span></h2>
+                        <div class="experienceItem">
+                            <div class="experienceHeader">
+                                <span class="experienceDates">Aug 2025 — Nov 2025</span>
+                                <span class="experienceCompany"><strong>Deltaflock</strong></span>
+                            </div>
+                            <div class="experienceProject">
+                                Ad-tech platform for automating Telegram advertising placement
+                                (Marketplace, Billing, Microservices)
+                            </div>
+                            <div class="experienceTeam">
+                                <b>Team:</b> Backend: 2 | Frontend: 1 | DevOps: 2
+                            </div>
+                            <div class="experienceDescription">
+                                <ul>
+                                    <li>Onboarded into an existing distributed system, analyzed architecture and service
+                                        dependencies
+                                    </li>
+                                    <li>Designed and developed the billing subsystem (billing / billing-lite) for
+                                        payment processing and accounting
+                                    </li>
+                                    <li>Integrated a payment provider into the microservices architecture</li>
+                                    <li>Designed inter-service interaction contracts via API Gateway</li>
+                                    <li>Set up a local development and testing environment (PostgreSQL, Kafka, Redis,
+                                        S3-compatible storage)
+                                    </li>
+                                    <li>Collaborated with DevOps on dev/test environments and documented service startup
+                                        sequences
+                                    </li>
+                                    <li>Developed the backend part of the billing-lite service and integrations with
+                                        user-service
+                                    </li>
+                                    <li>Analyzed and resolved integration and infrastructure-related issues during
+                                        development
+                                    </li>
+                                </ul>
+                                <p class="techLine">
+                                    <b>Project stack:</b>
+                                    Go, Python, PostgreSQL, Redis, Apache Kafka, Kubernetes, GitLab CI/CD
+                                </p>
+                            </div>
+                        </div>
                         <div class="experienceItem">
                             <div class="experienceHeader">
                                 <span class="experienceDates">Dec 2024 — Aug 2025</span>
@@ -242,7 +283,7 @@
 
                         <div class="experienceItem">
                             <div class="experienceHeader">
-                                <span class="experienceDates">Oct 2021 — Sep 2024</span>
+                                <span class="experienceDates">Jan 2022 — Sep 2024</span>
                                 <span class="experienceCompany"><strong>Personal Project</strong></span>
                             </div>
                             <div class="experienceProject">
@@ -276,7 +317,7 @@
 
                         <div class="experienceItem">
                             <div class="experienceHeader">
-                                <span class="experienceDates">Jan 2021 — Oct 2022</span>
+                                <span class="experienceDates">Dec 2021 — Oct 2022</span>
                                 <span class="experienceCompany"><strong>Personal Project</strong></span>
                             </div>
                             <div class="experienceProject">
@@ -313,6 +354,63 @@
     (function () {
         const isEn = location.pathname.startsWith("/en");
         document.getElementById(isEn ? "lang-en" : "lang-ru")?.classList.add("active");
+    })();
+</script>
+<script>
+    (function () {
+        const monthMap = {
+            Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+            Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
+        };
+
+        const dateElements = document.querySelectorAll(".experienceDates");
+        if (!dateElements.length) return;
+
+        let earliestDate = null;
+
+        dateElements.forEach(el => {
+            const text = el.textContent.trim();
+            const startPart = text.split("—")[0].trim();
+            const [monthStr, yearStr] = startPart.split(" ");
+
+            const month = monthMap[monthStr];
+            const year = parseInt(yearStr, 10);
+
+            if (isNaN(month) || isNaN(year)) return;
+
+            const date = new Date(year, month, 1);
+
+            if (!earliestDate || date < earliestDate) {
+                earliestDate = date;
+            }
+        });
+
+        if (!earliestDate) return;
+
+        const now = new Date();
+
+        let monthsDiff =
+            (now.getFullYear() - earliestDate.getFullYear()) * 12 +
+            (now.getMonth() - earliestDate.getMonth());
+
+        if (monthsDiff < 0) monthsDiff = 0;
+
+        let result;
+        if (monthsDiff < 12) {
+            result = "+";
+        } else {
+            const years = Math.floor(monthsDiff / 12);
+            const hasExtra = monthsDiff % 12 >= 3; // если есть хотя бы 3 месяца сверху — ставим +
+
+            result = hasExtra ? `${years}+` : `${years}`;
+        }
+
+        const target = document.getElementById("experienceYears");
+        if (target) {
+            target.textContent = result;
+        } else {
+            console.log("Experience:", result);
+        }
     })();
 </script>
 </body>
