@@ -172,7 +172,7 @@
             <div class="bottom-right-col">
                 <main class="rightPanel">
                     <section class="experienceSection">
-                        <h2>Опыт работы</h2>
+                        <h2>Опыт работы <span id="experienceYears"></span></h2>
                         <div class="experienceItem">
                             <div class="experienceHeader">
                                 <span class="experienceDates">авг. 2025 г. — нояб. 2025 г.</span>
@@ -328,6 +328,76 @@
     (function () {
         const isEn = location.pathname.startsWith("/en");
         document.getElementById(isEn ? "lang-en" : "lang-ru")?.classList.add("active");
+    })();
+</script>
+<script>
+    (function () {
+        const monthMap = {
+            "янв.": 0,
+            "февр.": 1,
+            "мар.": 2,
+            "апр.": 3,
+            "мая": 4,
+            "июн.": 5,
+            "июл.": 6,
+            "авг.": 7,
+            "сент.": 8,
+            "окт.": 9,
+            "нояб.": 10,
+            "дек.": 11
+        };
+
+        const dateElements = document.querySelectorAll(".experienceDates");
+        if (!dateElements.length) return;
+
+        let earliestDate = null;
+
+        dateElements.forEach(el => {
+            const text = el.textContent.trim();
+            const startPart = text.split("—")[0].trim();
+            const parts = startPart.split(" ");
+
+            const monthStr = parts[0];
+            const yearStr = parts[1];
+
+            const month = monthMap[monthStr];
+            const year = parseInt(yearStr, 10);
+
+            if (month === undefined || isNaN(year)) return;
+
+            const date = new Date(year, month, 1);
+
+            if (!earliestDate || date < earliestDate) {
+                earliestDate = date;
+            }
+        });
+
+        if (!earliestDate) return;
+
+        const now = new Date();
+
+        let monthsDiff =
+            (now.getFullYear() - earliestDate.getFullYear()) * 12 +
+            (now.getMonth() - earliestDate.getMonth());
+
+        if (monthsDiff < 0) monthsDiff = 0;
+
+        let result;
+        if (monthsDiff < 12) {
+            result = "+";
+        } else {
+            const years = Math.floor(monthsDiff / 12);
+            const hasExtra = monthsDiff % 12 >= 3;
+
+            result = hasExtra ? `${years}+` : `${years}`;
+        }
+
+        const target = document.getElementById("experienceYearsRu");
+        if (target) {
+            target.textContent = result;
+        } else {
+            console.log("Опыт:", result);
+        }
     })();
 </script>
 </body>
