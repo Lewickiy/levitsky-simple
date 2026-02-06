@@ -1,12 +1,64 @@
-.menu-items,
-.lang-switch {
+/* Основные стили меню */
+.top-menu {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.top-menu__nav {
+    max-width: 764px;
+    margin: 0 auto;
     display: flex;
-    gap: 6px;
     align-items: center;
+    height: 48px;
+    padding: 0 16px;
+}
+
+/* Левая часть меню - стили как у lang-switch */
+.top-menu__nav > .left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Стили для ссылок в меню (как у lang-switch) */
+.top-menu__nav > .left a.logo {
+    all: unset;
+    cursor: pointer;
+    opacity: 0.6;
+    font-weight: 500;
+    letter-spacing: 0.05em;
     font-size: 12px;
 }
 
-.menu-items a,
+.top-menu__nav > .left a.logo:hover,
+.top-menu__nav > .left a.logo.active {
+    opacity: 1;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Разделитель между пунктами меню */
+.top-menu__nav > span {
+    opacity: 0.4;
+    font-size: 12px;
+    margin: 0 3px;
+}
+
+/* Правая часть меню */
+.top-menu__actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Языковой переключатель */
+.lang-switch {
+    display: flex;
+    gap: 6px;
+    font-size: 12px;
+}
+
 .lang-switch a {
     all: unset;
     cursor: pointer;
@@ -15,34 +67,19 @@
     letter-spacing: 0.05em;
 }
 
-.menu-items a.active,
 .lang-switch a.active {
     opacity: 1;
     font-weight: 700;
     text-decoration: underline;
 }
 
-.menu-items span,
 .lang-switch span {
     opacity: 0.4;
 }
 
-.top-menu__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.lang-switch {
-}
-
-.top-menu__right {
-    position: relative;
-}
-
-.lang-switch {
-    position: absolute;
-    top: 12px;
-    right: 16px;
+/* Убираем дублирующие и конфликтующие стили */
+@media print {
+    .top-menu {
+        display: none !important;
+    }
 }
