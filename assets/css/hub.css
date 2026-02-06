@@ -61,16 +61,24 @@
 }
 
 .hub-marquee-track {
-    display: inline-block;
-    padding-left: 100%;
+    display: inline-flex;
+    gap: 0; /* расстояние между повторами */
     animation: marquee 25s linear infinite;
     font-size: 0.95rem;
     opacity: 0.85;
 }
 
+.hub-marquee-track span {
+    white-space: nowrap;
+}
+
 @keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .hub-footer {
