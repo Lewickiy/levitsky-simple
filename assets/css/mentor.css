@@ -1,63 +1,108 @@
-.mentor-col {
-    width: 100%;
+.mentor-content {
+    max-width: 760px;
+    margin: 0 auto 40px auto;
+    text-align: left;
 }
 
-.mentorPanel {
-    background-color: whitesmoke;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+.mentor-block {
+    margin-bottom: 32px;
 }
 
-.mentorPanel h2 {
+.mentor-h2 {
     position: relative;
-    color: #0a335c;
-    font-size: 1.2em;
+    color: #ffffff;
+    font-size: 1.1em;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 15px;
-    padding: 15px 15px 4px 15px;
+    padding: 10px 15px 6px 15px;
     border-bottom: none;
+    letter-spacing: 0.08em;
+    text-align: center;
 }
 
-.mentorPanel h2::after {
+.mentor-h2::after {
     content: "";
     position: absolute;
-    left: 15px;
-    right: 15px;
+    left: 15%;
+    right: 15%;
     bottom: 4px;
     height: 1px;
-    background: rgba(10, 51, 92, 0.5);
-    transform-origin: left;
+    background: rgba(255, 255, 255, 0.5);
+    transform-origin: center;
     transform: scaleX(1);
     transition: transform 0.3s ease;
 }
 
-.mentorPanel h2:hover::after {
+.mentor-h2:hover::after {
     transform: scaleX(0.85);
 }
 
-.mentorPanel h3 {
-    color: #0a335c;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 10px 15px 0 15px;
+.mentor-block {
+    margin-bottom: 36px;
 }
 
-.mentorPanel p, .mentorPanel ul {
-    font-size: 1em;
+.mentor-block ul {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-left: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.mentor-block li {
+    margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .mentor-block ul {
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .mentor-block li {
+        margin-bottom: 10px;
+    }
+}
+
+
+.mentor-block p {
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.mentor-block ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.mentor-block li {
+    margin-bottom: 8px;
     line-height: 1.5;
-    color: #333;
-    padding: 0 15px 4px 15px;
 }
 
-.mentorPanel ul {
-    padding-left: 45px;
-    list-style-type: circle;
+.mentor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
 }
 
-.mentorPanel li {
-    margin-bottom: 6px;
+.mentor-card {
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.05);
+}
+
+.mentor-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 1rem;
+}
+
+.mentor-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
