@@ -4,12 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Anatoliy Levitsky — Backend Engineer | Mentor | Freelancer</title>
+    <title>Anatoliy Levitsky — Senior Java Backend Engineer | Spring, Kafka, Microservices</title>
 
     <meta name="description"
-          content="Backend Engineer (Java, Spring, Kafka, PostgreSQL). Microservices, architecture, production-systems."/>
+          content="Senior Java Backend Engineer with experience in Spring, Kafka, PostgreSQL and microservices. Building scalable backend systems, REST APIs and production-ready architectures."/>
     <meta name="keywords"
-          content="Java developer, Backend Engineer, Spring, Kafka, PostgreSQL, microservices, mentor, cv"/>
+          content="Java backend engineer, senior java developer, spring boot, kafka, postgresql, microservices, backend developer, distributed systems, cv"/>
     <meta name="author" content="Anatoliy Levitsky"/>
     <meta name="robots" content="index, follow"/>
 
@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://levitsky.ru/"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Levitsky"/>
-    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:locale" content="en_US"/>
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="Anatoliy Levitsky — Backend Engineer"/>
@@ -30,14 +30,10 @@
 
     <link rel="canonical" href="https://levitsky.ru/"/>
 
-    <link rel="alternate" hreflang="x-default" href="https://levitsky.ru/en/"/>
-    <link rel="alternate" hreflang="en" href="https://levitsky.ru/en/"/>
-    <link rel="alternate" hreflang="ru" href="https://levitsky.ru/"/>
-
     <link rel="icon" href="public/favicon.ico"/>
 
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="assets/css/top-menu.css"/>
+    <link rel="stylesheet" href="assets/css/hub.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
     <script type="application/ld+json">
@@ -46,12 +42,12 @@
             "@graph": [
                 {
                     "@type": "Person",
-                    "@id": "https://levitsky.ru/#person",
-                    "name": "Анатолий Левицкий",
-                    "url": "https://levitsky.ru/",
+                    "@id": "https://levitsky.ru/en/#person",
+                    "name": "Anatoliy Levitsky",
+                    "url": "https://levitsky.ru/en/",
                     "image": "https://levitsky.ru/public/avatar_levitsky.webp",
-                    "jobTitle": "Backend Engineer (Java, Spring, Kafka)",
-                    "description": "Backend Engineer с опытом разработки на Java, Spring, Kafka и PostgreSQL. Микросервисы, распределённые системы, REST API и production-системы.",
+                    "jobTitle": "Senior Backend Engineer (Java, Spring, Kafka)",
+                    "description": "Senior Backend Engineer with experience in Java, Spring, Kafka, and PostgreSQL. Specializing in microservices, distributed systems, REST APIs, and production-grade backend systems.",
                     "sameAs": [
                         "https://github.com/Lewickiy",
                         "https://www.linkedin.com/in/lewickiy/",
@@ -69,18 +65,20 @@
                         "Docker",
                         "Flyway",
                         "PostGIS",
-                        "GeoServer"
+                        "GeoServer",
+                        "Backend Architecture",
+                        "Scalable Systems"
                     ]
                 },
                 {
                     "@type": "ProfilePage",
-                    "@id": "https://levitsky.ru/#profilepage",
-                    "url": "https://levitsky.ru/",
-                    "name": "Anatoliy Levitsky — Backend Java Engineer",
-                    "description": "Professional profile of Anatoliy Levitsky, Backend Java Engineer. Experience with Java, Spring, Kafka, PostgreSQL, microservices and production systems.",
-                    "inLanguage": "ru",
+                    "@id": "https://levitsky.ru/en/#profilepage",
+                    "url": "https://levitsky.ru/en/",
+                    "name": "Anatoliy Levitsky — Senior Java Backend Engineer",
+                    "description": "Professional profile of Anatoliy Levitsky, Senior Java Backend Engineer. Experience with Java, Spring, Kafka, PostgreSQL, microservices, and production systems.",
+                    "inLanguage": "en",
                     "mainEntity": {
-                        "@id": "https://levitsky.ru/#person"
+                        "@id": "https://levitsky.ru/en/#person"
                     }
                 }
             ]
@@ -119,97 +117,35 @@
     </noscript>
 </head>
 
-<body data-page="resume">
-<div class="body">
-    <div class="resume-wrapper">
-        <header class="top-menu">
-            <nav class="top-menu__nav">
-                <div class="left">
-                    <a href="/ru/cv/" class="logo">CV</a>
-                </div>
-                <span>·</span>
-                <div class="left">
-                    <a href="/ru/mentor" class="logo">Ментор</a>
-                </div>
-            </nav>
-        </header>
-        <div class="top-row">
-            <div class="top-left-col">
-                <div class="topLeftPanel">
-                    <div class="photoWrapper">
-                        <img src="public/avatar_levitsky.webp"
-                             alt="Anatoliy Levitsky — Backend Engineer"
-                             class="profilePhoto"/>
-                    </div>
-                </div>
-            </div>
-            <div class="top-right-col">
-                <div class="topRightPanel">
-                    <header class="resumeHeader">
-                        <h1>Anatoliy Levitsky</h1>
-                        <h3>Backend Engineer</h3>
-                    </header>
-                    <section>
-                        <h2>Профиль</h2>
-                        <p>Backend Engineer с опытом технического лидерства и архитектурных решений.</p>
-                        <p>Специализируюсь на backend-разработке (Java, Spring, Kafka, PostgreSQL),
-                            совмещаю инженерное мышление с ответственностью за результат и качество системы.</p>
-                    </section>
-                </div>
+<body>
+<div class="hub-wrapper">
+    <main class="hub">
+        <h1 class="hub-title">Anatoliy Levitsky </h1>
+        <h2 class="hub-subtitle">Backend Engineer · Java · Microservices</h2>
+
+        <nav class="hub-nav">
+            <a href="/en/cv/" class="hub-link">CV</a>
+            <!--            <a href="/ru/mentor/" class="hub-link">Mentor</a>-->
+            <!--            <a href="/ru/hire/" class="hub-link">Hire / Consulting</a>-->
+        </nav>
+
+        <div class="hub-marquee">
+            <div class="hub-marquee-track">
+                Java · Spring · Spring Boot · Kafka · PostgreSQL · Microservices · Distributed Systems · REST API ·
+                Docker · Flyway · PostGIS · GeoServer · Mentorship · Consulting ·
+                Java · Spring · Spring Boot · Kafka · PostgreSQL · Microservices · Distributed Systems · REST API ·
+                Docker · Flyway · PostGIS · GeoServer · Mentorship · Consulting ·
             </div>
         </div>
-        <div class="bottom-row">
-            <div class="bottom-left-col">
-                <aside class="leftPanel">
-                    <div class="stickyContainer">
-                        <section>
-                            <h2>Контакты</h2>
-                            <div class="contactItem">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+79114281854">+7 (911) 428-18-54</a>
-                            </div>
-                            <div class="contactItem">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:lewickiy@gmail.com">lewickiy@gmail.com</a>
-                            </div>
-                            <div class="contactItem">
-                                <i class="fab fa-telegram"></i>
-                                <a href="https://t.me/alewickiy">@alewickiy</a>
-                            </div>
-                            <div class="contactItem">
-                                <i class="fab fa-github"></i>
-                                <a href="https://github.com/Lewickiy">github.com/Lewickiy</a>
-                            </div>
-                            <div class="contactItem">
-                                <i class="fab fa-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/lewickiy/">LinkedIn</a>
-                            </div>
-                        </section>
-                        <section class="skillsSection">
-                            <h2>Стек технологий</h2>
-                            <div class="skillsList">
-                                Java, Spring, Maven / Gradle, MySQL / SQLite / PostgreSQL, Apache-Kafka, Docker, Flyway,
-                                GitLab, YouTrack API / Jira API, OkHttp / Apache POI / Telegram API / Postman / Swagger,
-                                JDBC, MinIO (S3), PostGIS / GeoServer / S2Geometry, JavaFX
-                            </div>
-                        </section>
-                    </div>
-                </aside>
-            </div>
-            <div class="bottom-right-col">
-                <main class="rightPanel">
-                    <section class="experienceSection">
-                    </section>
-                </main>
-            </div>
-        </div>
-    </div>
+
+        <footer class="hub-footer">
+            <p>
+                Senior Java Backend Engineer specializing in Spring-based backend development, microservices
+                architecture,
+                distributed systems, REST APIs and production-ready scalable solutions for real-world products.
+            </p>
+        </footer>
+    </main>
 </div>
-<script>
-    (function () {
-        const isEn = location.pathname.startsWith("/en");
-        document.getElementById(isEn ? "lang-en" : "lang-ru")?.classList.add("active");
-    })();
-</script>
 </body>
 </html>
