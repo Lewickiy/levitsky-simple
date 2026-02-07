@@ -1,0 +1,112 @@
+/* ===== Glitch base ===== */
+@keyframes glitchShake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+        transform: translate(-1px, 1px) rotate(-0.2deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(0.2deg);
+    }
+    60% {
+        transform: translate(-1px, -1px) rotate(0deg);
+    }
+    80% {
+        transform: translate(1px, 1px) rotate(0.2deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* ===== Levels ===== */
+
+.glitch-1 * {
+    animation: glitchShake 0.15s infinite;
+}
+
+.glitch-2 * {
+    animation: glitchShake 0.12s infinite;
+    filter: blur(0.3px);
+}
+
+.glitch-3 * {
+    animation: glitchShake 0.1s infinite;
+    filter: blur(0.6px) hue-rotate(20deg);
+}
+
+.glitch-4 * {
+    animation: glitchShake 0.08s infinite;
+    filter: blur(1px) hue-rotate(60deg);
+    transform: scale(1.01);
+}
+
+.glitch-5 * {
+    animation: glitchShake 0.06s infinite;
+    filter: blur(1.5px) hue-rotate(120deg);
+    transform: scale(1.02) rotate(0.5deg);
+}
+
+/* ===== Broken mode (50+) ===== */
+
+.glitch-broken {
+    animation: brokenScreen 0.4s infinite;
+}
+
+@keyframes brokenScreen {
+    0% {
+        transform: rotate(0deg) scale(1);
+        filter: invert(0);
+    }
+    25% {
+        transform: rotate(2deg) scale(0.98);
+        filter: invert(1);
+    }
+    50% {
+        transform: rotate(-2deg) scale(1.02);
+        filter: invert(0);
+    }
+    75% {
+        transform: rotate(1deg) scale(0.99);
+        filter: invert(1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+        filter: invert(0);
+    }
+}
+
+/* ===== Message overlay ===== */
+
+#bug-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 51, 92, 0.95);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#bug-message.show {
+    opacity: 1;
+}
+
+/* ===== Clickable bug ===== */
+.bug {
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    transition: transform 0.1s ease;
+}
+
+.bug:hover {
+    transform: scale(1.2) rotate(10deg);
+}
